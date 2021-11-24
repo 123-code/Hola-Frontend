@@ -24,4 +24,5 @@ const Main = ()=>{
     )
 }
 
-export default Main;
+module.exports = {Main:Main,
+    Navbar:Navbar}
