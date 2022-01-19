@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 
+
 import Main from './Pages/Main';
 import Agendar from './Pages/Agendar';
 import { ImageSlider } from './Components/ImageSlider';
@@ -16,7 +17,7 @@ function App() {
    <Navbar/>
     </>
 
-  );
-}
+
+  )}
 
 export default App;

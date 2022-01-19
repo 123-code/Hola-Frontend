@@ -1,23 +1,7 @@
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import {Link} from 'react-router-dom';
-
-
-
-export const Navbar = () =>{
-    return(
-        
-    <ul style = {{'text-align':'left',color:'orange'}}>
-        <Link to = "Main"> Inicio </Link>
-        <Link to = "Nosotros"> Nosotros</Link>
-        <Link to = "Agendar"> Agendar </Link>
-        <h3>Contacto</h3>
-    </ul>
-    
-
-    )
-}
-
+import { Navbar } from '../Components/Navbar';
 
 const Images = () =>{
     const Images = [{
@@ -49,4 +33,6 @@ const Main = ()=>{
         </>
     )
 }
+
 export default Main;
+
