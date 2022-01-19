@@ -1,20 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 
-import {Main,Navbar} from './Pages';
+
+import Main from './Pages/Main';
 import Agendar from './Pages/Agendar';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { ImageSlider } from './Components/ImageSlider';
+import { Navbar } from './Components/Navbar';
 
 function App() {
   return (
-    <Router>
-      <Navbar>
-    <div className="App">
-      <Route path = "/" component = {Main} exact></Route>
-      <Route path = "/agendar" component = {Agendar}></Route>
-    </div>
-    </Navbar>
-    </Router>
+    <>
+    <h1> App.js </h1>
+    
+   <ImageSlider/>
+   <Navbar/>
+    </>
 
   );
 }
