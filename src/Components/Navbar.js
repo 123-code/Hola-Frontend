@@ -8,10 +8,11 @@ import {GoThreeBars} from 'react-icons/go';
 export function Navbar(){
     return(
         <>
-       <div className="navbar">
+<div className="navbar">
 <Link to = "#" className="menu-bars"></Link>
 <GoThreeBars/>
-       </div>
+</div>
+
   </>
     )
 } export default Navbar;

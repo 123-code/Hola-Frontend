@@ -1,5 +1,5 @@
 import React from 'react';
-
+// import Hola from 'Hola-Frontend/public/Hola.jpeg';
 
 
 const Main = ()=>{
