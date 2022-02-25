@@ -4,9 +4,13 @@ import { Link } from 'react-router-dom';
 import {GoThreeBars} from 'react-icons/go';
 import {AiOutlineClose} from 'react-icons/ai';
 import SidebarData from './Sidebardata';
-import './Navbar.css';
+//import './Navbar.css';
 
 //import {Contacto} from '/Pages';
+
+
+
+ 
 export default function Navbar(){
 
   const[sidebar,updater]=useState(false);
@@ -18,6 +22,7 @@ const showbar = ()=>{
 
 return(
         <>
+         
 <div className="navbar">
 <Link to = "#" className="menu-bars"></Link>
 <GoThreeBars onClick = {showbar}/>
@@ -32,11 +37,14 @@ return(
     <Link to="#" className="menu-bars"><AiOutlineClose/></Link></li>
     {SidebarData.map((item,index)=>{
       return(
+        <>
+       
         <li key={index} className={item.cName}>
        <Link to={item.path}></Link>
        {item.icon}
         <span>{item.title}</span>
         </li>
+        </>
       )
     })}
 </ul>
@@ -44,3 +52,6 @@ return(
   </>
     )
 }
+
+
+ 
