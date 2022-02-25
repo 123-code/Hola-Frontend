@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {GoThreeBars} from 'react-icons/go';
 import {AiOutlineClose} from 'react-icons/ai';
 import SidebarData from './Sidebardata';
+import './Navbar.css';
 
 //import {Contacto} from '/Pages';
 export default function Navbar(){
