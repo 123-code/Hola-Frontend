@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
+import  Navbar  from './Components/Navbar';
 
-const Foro = ()=>{
+
+const Foro = ()=>{  
     return(
         <>
         <h1 className="text-center"> Foro </h1>

@@ -1,4 +1,5 @@
 import React from 'react';
+import  Navbar  from './Components/Navbar';
 // import Hola from 'Hola-Frontend/public/Hola.jpeg';
 
 
