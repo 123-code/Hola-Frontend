@@ -1,19 +1,44 @@
 import React,{useState} from 'react';
 
-const AgregarComment = () => {
-    let[agregado,setagregado]=useState(false);
+const AgregarComment = ({setArticleInfo}) => {
+    let[username,setusername]=useState('');
 
-    let [comment,setComment]=useState(null);
+    let [comment,setComment]=useState('');
+
+// sending post request to server to add comment.
+const addquestion = async()=>{
+  const result = await fetch(`/api/questions`,{
+  method:'post',
+  body:JSON.stringify({ username,text:comment }),
+  headers:{
+    'Content-Type':'application/json',
+
+  }
+
+  });
+  const body = await result.json();
+  setArticleInfo(body);
+}
+
 
     
-    return(
+    return (
         <>
         <div class="flex justify-center">
   <div class="mb-3 xl:w-96">
+
+<label>
+  Nombre:
+  
+  <input type="text" value={username} onChange={(event)=>setusername(event.target.value)}/>
+
+</label>
+
     <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700"
-      >Agregar pregunta </label
-    >
-    <textarea
+      > Pregunta: </label>
+    
+    
+    <textarea 
       className="
         form-control
         block
@@ -34,16 +59,17 @@ const AgregarComment = () => {
       id="exampleFormControlTextarea1"
       rows="3"
       placeholder="Tu pregunta aquí"
-    ></textarea>
+      value={comment} onChange={(event)=>setComment(event.target.value)}/>
+
   </div>
 </div>
 
-<button onClick={()=>setagregado(agregado=true),()=>setComment(comment)} class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+<button onClick={()=>addquestion()} class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
   Preguntar
 </button>
 
-<h2>{agregado? "Comentario Agregado":""}</h2>
+
         </>
-    )
-}
+    );
+};
 export default AgregarComment;
