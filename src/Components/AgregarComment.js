@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 
-const AgregarComment = ({setArticleInfo}) => {
+const AgregarComment = ({setcomment}) => {
     let[username,setusername]=useState('');
 
     let [comment,setComment]=useState('');
@@ -14,13 +14,13 @@ const addquestion = async()=>{
     'Content-Type':'application/json',
 
   }
-
+ 
   });
   const body = await result.json();
-  setArticleInfo(body);
+  setComment(body);
+  setusername("");
+  setComment("");
 }
-
-
     
     return (
         <>
