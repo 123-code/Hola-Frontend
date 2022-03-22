@@ -1,9 +1,9 @@
 import React,{useState} from 'react';
-import  Navbar  from './Components/Navbar';
-import  Comment from './Components/AgregarComment';
-import Lista from '/ListaComentarios';
+import  Navbar  from '../Components/Navbar';
+import AgregarComment from '../Components/AgregarComment';
+import Lista from '../Components/ListaComentarios';
 
-const Foro = ({match})=>{  
+const Foro = ({match})=>{   
     const [Comment,SetComment] = useState({comments:[]});
 
     const fetchdata= async ()=>{
@@ -19,7 +19,7 @@ const Foro = ({match})=>{
         
         <Navbar/>
         <Lista/>
-        <Comment/>
+        <AgregarComment/>
 
         </>
     )

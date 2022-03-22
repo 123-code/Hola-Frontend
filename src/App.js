@@ -5,7 +5,7 @@ import Logo from './Logo.jpg';
 
 
 import Main from './Pages/Main';
-import Agendar from './Pages/Agendar';
+
 import ImageSlider  from './Components/ImageSlider';
 import  Navbar  from './Components/Navbar';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
