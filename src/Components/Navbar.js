@@ -18,35 +18,44 @@ export default function Navbar(){
 return(
         <>
 
-<div></div>
+
 <div className="w-60 h-full shadow-md bg-white px-1 absolute divide-y divide-slate-100">
 <ul className="relative">
 
 <div>
   <li className="relative">
-   <AiFillHome className='justify-items-start'/>
-   <Link to="/">Inicio</Link>
+   <AiFillHome className ='justify-items-start'/>
+   <Link to="/" className = "font-mono text-slate-300 pt-6">Inicio</Link>
 </li>
+
 </div>
+ 
+<div></div>
+
 
 <div>
   <li className='relative'>
   <FaQuestion className='justify-items-start'/>
-  <Link to="/Foro">Foro</Link>
+  <Link to="/Foro" className = "font-mono">Foro</Link>
+</li>
+</div>
+
+<div>
+<li className="relative">
+   <HiUserGroup className='justify-items-start'/>
+    <Link to="/Nosotros" className = "font-mono">Quienes Somos</Link>
+</li>
+</div>
+
+<div>
+  <li className="relative">
+   <BsFillTelephoneFill/>
+    <Link to="/Nosotros" className = "font-mono">Contactanos</Link>
 </li>
 </div>
 
 
 
- <li className="relative">
-   <HiUserGroup className='justify-items-start'/>
-    <Link to="/Nosotros">Quienes Somos</Link>
-</li>
-
-<li className="relative">
-   <BsFillTelephoneFill/>
-    <Link to="/Nosotros">Contactanos</Link>
-</li>
 
 
 
