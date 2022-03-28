@@ -24,33 +24,34 @@ return(
 
 <div>
   <li className="relative">
-   <AiFillHome className ='justify-items-start'/>
+  <AiFillHome className ='justify-items-start'/>
    <Link to="/" className = "font-mono text-slate-300 pt-6">Inicio</Link>
+   
 </li>
 
 </div>
  
-<div></div>
 
 
 <div>
   <li className='relative'>
   <FaQuestion className='justify-items-start'/>
-  <Link to="/Foro" className = "font-mono">Foro</Link>
+  <Link to="/foro" className = "font-mono">Foro</Link>
 </li>
 </div>
 
 <div>
 <li className="relative">
    <HiUserGroup className='justify-items-start'/>
-    <Link to="/Nosotros" className = "font-mono">Quienes Somos</Link>
+    <Link to="/nosotros" className = "font-mono">Quienes Somos</Link>
 </li>
 </div>
 
 <div>
   <li className="relative">
    <BsFillTelephoneFill/>
-    <Link to="/Nosotros" className = "font-mono">Contactanos</Link>
+    <Link to="/contacto" className = "font-mono">Contactanos</Link>
+    
 </li>
 </div>
 
