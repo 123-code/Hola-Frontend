@@ -1,17 +1,17 @@
 
 
-import Logo from './Logo.jpg';
+import React from 'react';
+
 
 
 
 import Main from './Pages/Main';
 
-import ImageSlider  from './Components/ImageSlider';
-import  Navbar  from './Components/Navbar';
+
 import {
-  BrowserRouter,
-  Routes,
+  BrowserRouter as Router,
   Route,
+  Routes,
  
 } from "react-router-dom";
 
@@ -22,44 +22,24 @@ import Nosotros from './Pages/Nosotros';
 import Contacto from './Pages/Contacto';
 import NotFound from './Pages/NotFound';
 
-function App() {
-  return (
-  <div className='navbar'>
-    <img className="object-scale-down h-48 w-96 inline-block align-middle" src={Logo} alt="logo"></img>
-
-
-
-<Routes>
-<Navbar/>
-<ImageSlider/>
-   <Route  exact path= "/" element={<App/>}/>
-   <Route path = "/foro" element={<Foro/>}/>
-    <Route path = "/nosotros" element={<Nosotros/>}/>
-    <Route path = "/contacto" element={<Contacto/>}/>
-    <Route element={<NotFound/>}/>
-</Routes>
-   
-
-
-
-
- </div>
-  
-   
-  
-  
- 
-   
-     
-    
-  
-  
- 
-  
-  
-   
-
-  )
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+       <div>
+         <Main/>
+       <Routes>
+              <Route path="/" component={Main} exact />
+              <Route path="/about" component={Nosotros} />
+              <Route path="/foro" component={Foro} />
+              <Route path="/contacto" component={Contacto} />
+              <Route component={NotFound} />
+       </Routes>
+       </div>
+      </Router>
+      
+    );
+  }
 }
 
 export default App;

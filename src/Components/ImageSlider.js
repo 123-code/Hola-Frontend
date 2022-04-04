@@ -8,9 +8,10 @@ import Nina from '../Img2.jpg';
 export default function  ImageSlider (){
     return(
         <>
-        <Carousel showArrows={true} showThumbs={false} showStatus={true}>
+        <body className="bg-blue-200 text-center">
+            <Carousel showArrows={true} showThumbs={false} showStatus={false}>
          <div>
-            <img className="object-scale-down h-45 w-57" src = {Nino} alt="Niño"/>
+            <img className="object-scale-down h-45 w-45" src = {Nino} alt="Niño"/>
             <p className="Trabajo con niños">Trabajo con niños</p>
  
             
@@ -23,6 +24,8 @@ export default function  ImageSlider (){
         </div>
     
 </Carousel>
+</body>
+        
         </>
     )
     

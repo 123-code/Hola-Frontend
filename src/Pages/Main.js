@@ -1,15 +1,16 @@
 import React from 'react';
 import  Navbar  from '../Components/Navbar';
-// import Hola from 'Hola-Frontend/public/Hola.jpeg';
-
-
+import ImageSlider from '../Components/ImageSlider';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Logo from '../Logo.jpg';
+ 
 const Main = ()=>{
     return(
         <>
-        <h1 className = "text-center "> Hola Terapia de lenguaje </h1>
-        <h3 className = "font-serif font-family:Georgia font-size: 5.25rem" > Cambiamos Vidas! </h3>
-    
-      
+        <img className="object-scale-down h-48 w-96 inline-block align-middle" src={Logo} alt="logo"></img>
+        <Navbar/>
+        <ImageSlider/>
+
         </>
     )
 }

@@ -19,8 +19,8 @@ return(
         <>
 
 
-<div className="w-60 h-full shadow-md bg-white px-1 absolute divide-y divide-slate-100">
-<ul className="relative">
+<nav>
+<ul>
 
 <div>
   <li className="relative">
@@ -55,15 +55,9 @@ return(
 </li>
 </div>
 
-
-
-
-
-
-
 </ul>
-</div>
 
+</nav>
   </>
     )
 }
