@@ -8,17 +8,15 @@ import{FaQuestion} from 'react-icons/fa';
 import{HiUserGroup} from 'react-icons/hi';
 import {BsFillTelephoneFill} from 'react-icons/bs';
 
-// falta cambiar css aquí
+
  
 export default function Navbar(){
 
   
-
-
 return(
         <>
 
-
+<body>
 <nav>
 <ul>
 
@@ -58,6 +56,8 @@ return(
 </ul>
 
 </nav>
+</body>
+
   </>
     )
 }
