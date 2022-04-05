@@ -1,11 +1,4 @@
-
-
 import React from 'react';
-
-
-
-
-import Main from './Pages/Main';
 
 
 import {
@@ -21,25 +14,31 @@ import Foro from './Pages/Foro';
 import Nosotros from './Pages/Nosotros';
 import Contacto from './Pages/Contacto';
 import NotFound from './Pages/NotFound';
+import Main from './Pages/Main';
 
-class App extends React.Component {
-  render() {
-    return (
+// create class component.
+export default class App extends React.Component {
+  render(){
+    return(
+     
       <Router>
-       <div>
-         <Main/>
-       <Routes>
-              <Route path="/" component={Main} exact />
-              <Route path="/about" component={Nosotros} />
-              <Route path="/foro" component={Foro} />
-              <Route path="/contacto" component={Contacto} />
-              <Route component={NotFound} />
-       </Routes>
-       </div>
+         <div className="App">
+        <Routes>
+          <Route path='/' element={<Main/>}/>
+          <Route path='/foro' element={<Foro/>}/> 
+          <Route path='/nosotros' element={<Nosotros/>}/>
+          <Route path='/contacto' element={<Contacto/>}/>
+          <Route path='*' element={<NotFound/>}/>
+          
+        </Routes>
+        
+        
+        </div>
+        <div className="page-body">
+       
+        </div>
       </Router>
       
-    );
+    )
   }
 }
-
-export default App;
