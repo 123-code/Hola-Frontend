@@ -17,10 +17,11 @@ return(
         <>
 
 <body>
-<nav>
+<nav className = "w-60 h-full shadow-md bg-white px-1 absolute">
+
 <ul>
 
-<div>
+<div className = "flex space-x-4">
   <li className="relative">
   <AiFillHome className ='justify-items-start'/>
    <Link to="/" className = "font-mono text-slate-300 pt-6">Inicio</Link>
@@ -31,7 +32,7 @@ return(
  
 
 
-<div>
+<div className= "flex space-x-4">
   <li className='relative'>
   <FaQuestion className='justify-items-start'/>
   <Link to="/foro" className = "font-mono">Foro</Link>
