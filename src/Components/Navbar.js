@@ -17,7 +17,8 @@ return(
         <>
 
 <body>
-<nav className = "w-60 h-full shadow-md bg-white px-1 absolute">
+
+<nav className = "w-60 h-60 shadow-md bg-white px-1 absolute">
 
 <ul>
 

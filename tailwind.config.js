@@ -5,7 +5,12 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      colors:{
+        "Orange": "bg-orange-200",
+
+      }
+    },
   },
   plugins: [require('@tailwindcss/forms')]
 }

@@ -11,14 +11,14 @@ export default function  ImageSlider (){
         <body className="bg-orange-200 text-center">
             <Carousel showArrows={true} showThumbs={false} showStatus={false}>
          <div>
-            <img className="object-scale-down h-45 w-45" src = {Nino} alt="Niño"/>
+            <img className="object-scale-down h-47 w-47" src = {Nino} alt="Niño"/>
             <p className="Trabajo con niños">Trabajo con niños</p>
  
             
         </div>
 
         <div>
-        <img className="object-scale-down h-45 w-57" src={Nina} alt="Niña"/>
+        <img className="object-scale-down h-40 w-45" src={Nina} alt="Niña"/>
         <div><p>Trabajo Con Infantes</p></div>
         
         </div>
