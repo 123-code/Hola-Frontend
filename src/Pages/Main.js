@@ -3,16 +3,10 @@ import  Navbar  from '../Components/Navbar';
 import ImageSlider from '../Components/ImageSlider';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Logo from '../Logo.jpg';
+import Frase from '../Components/Frase';
  
 // Component de frase 
 
-const Frase = ()=>{
-    return(
-       <div className ="bg-indigo-500">
-              <h1 className="text-center text-green"> Cambiamos Vidas ! </h1>
-       </div>
-    )
-}
 
 const Main = ()=>{
     return(
@@ -22,6 +16,24 @@ const Main = ()=>{
         <Frase/>
         <Navbar/>
         <ImageSlider/>
+
+        <h1> Hola Terapia De Lenguaje </h1>
+
+        <p> Especializados en: 
+            .....
+        </p>
+
+
+
+
+        <h2> Encuentranos En:</h2>
+
+        <ul>
+            <l1> Ambato </l1>
+            <l1> Riobamba </l1>
+         </ul>
+            
+        
 
         </>
     )
