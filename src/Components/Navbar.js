@@ -1,8 +1,5 @@
-import React,{useState} from 'react';
-
+import React from 'react';
 import { Link } from 'react-router-dom';
-
-import SidebarData from './Sidebardata';
 import{AiFillHome} from 'react-icons/ai';
 import{FaQuestion} from 'react-icons/fa';
 import{HiUserGroup} from 'react-icons/hi';
