@@ -15,7 +15,7 @@ const Main = ()=>{
         
         <img className="object-scale-down h-48 w-96 inline-block align-middle" src={Logo} alt="logo"></img>
         <Frase/>
-        <Navbar/>
+       
         <ImageSlider/>
         
 

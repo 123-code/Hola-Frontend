@@ -4,7 +4,7 @@ import{AiFillHome} from 'react-icons/ai';
 import{FaQuestion} from 'react-icons/fa';
 import{HiUserGroup} from 'react-icons/hi';
 import {BsFillTelephoneFill} from 'react-icons/bs';
-
+import {MdToys} from 'react-icons/md';
 
  
 export default function Navbar(){
@@ -15,7 +15,7 @@ return(
 
 <body>
 
-<nav className = "w-60 h-60 shadow-md bg-white px-1 absolute">
+<nav className = "w-60 h-60 shadow-md bg-white px-2 absolute">
 
 <ul>
 
@@ -49,6 +49,13 @@ return(
    <BsFillTelephoneFill/>
     <Link to="/contacto" className = "font-mono">Contactanos</Link>
     
+</li>
+</div>
+
+<div>
+<li className="relative">
+   <MdToys/>
+    <Link to="/nosotros" className = "font-mono">Material</Link>
 </li>
 </div>
 
