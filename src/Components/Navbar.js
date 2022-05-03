@@ -15,7 +15,7 @@ return(
 
 <body>
 
-<nav className = "w-60 h-60 shadow-md bg-white px-2 absolute">
+<nav className = "w-65 h-65 shadow-md bg-white px-3 absolute inset-y-0 left-0 ">
 
 <ul>
 
@@ -55,7 +55,7 @@ return(
 <div>
 <li className="relative">
    <MdToys/>
-    <Link to="/nosotros" className = "font-mono">Material</Link>
+    <Link to="/material" className = "font-mono">Material</Link>
 </li>
 </div>
 

@@ -24,6 +24,7 @@ const addquestion = async()=>{
     
     return (
         <>
+         
         <div class="flex justify-center">
   <div class="mb-3 xl:w-96">
 
@@ -33,11 +34,12 @@ const addquestion = async()=>{
   <input type="text" value={username} onChange={(event)=>setusername(event.target.value)}/>
 
 </label>
-
+<div>
     <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700"
-      > Pregunta: </label>
+      > 
+      Pregunta: </label>
     
-    
+</div> 
     <textarea 
       className="
         form-control
@@ -62,11 +64,10 @@ const addquestion = async()=>{
       value={comment} onChange={(event)=>setComment(event.target.value)}/>
 
   </div>
+  <button> Preguntar </button>
 </div>
 
-<button onClick={()=>addquestion()} class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-  Preguntar
-</button>
+
 
 
         </>

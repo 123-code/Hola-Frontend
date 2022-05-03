@@ -12,21 +12,20 @@ import{FaQuestion} from 'react-icons/fa';
  const Footer = ()=>{
      return(
         <>
-         <div className = "background-green-50">
+         <div className = "bg-gray-100">
 
          <img className="object-scale-left h-12 w-12" src={Logo} alt="logo"/>
          <div>
              <FaQuestion/>
-             <p> Tienes Dudas sobre la terapia de lenguaje?</p>
-             <p> Pregunta en nuestro foro! </p>
+             <p className = "font-mono"> Pregunta en nuestro foro! </p>
+
+             <p className = "font-mono"> Contáctanos </p>   
+         <GoMail/> <BsInstagram/> <AiFillGithub/> <BsTwitter/> <AiOutlineFacebook/>
 
          </div>
 
-         <div>
-          <p> Contáctanos </p>   
-         <GoMail/> <BsInstagram/> <AiFillGithub/> <BsTwitter/>
-         </div>
-      
+         
+          
          </div>
          </>
          

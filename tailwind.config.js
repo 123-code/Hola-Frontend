@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors:{
         "Orange": "bg-orange-200",
+        "Lime": "bg-lime-600",
 
       }
     },

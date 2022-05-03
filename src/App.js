@@ -25,7 +25,7 @@ export default class App extends React.Component {
       
       <Router>
          <div className="App">
-         <Navbar/>
+         
         <Routes>
           <Route path='/' element={<Main/>}/>
           <Route path='/foro' element={<Foro/>}/> 
@@ -39,7 +39,7 @@ export default class App extends React.Component {
         
         </div>
         <div className="page-body">
-       
+        <Navbar className ="bottom-0 right-0"/>
         </div>
       </Router>
       
