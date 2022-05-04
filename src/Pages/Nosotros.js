@@ -4,6 +4,7 @@ const Nosotros = ()=>{
     return(
         <>
         <h1> Nosotros </h1>
+        <h2> Quienes somos </h2>
         </>
     )
 }

@@ -20,15 +20,21 @@ import{FaQuestion} from 'react-icons/fa';
              <p className = "font-mono"> Pregunta en nuestro foro! </p>
 
              <p className = "font-mono"> Contáctanos </p>   
-         <GoMail/> <BsInstagram/> <AiFillGithub/> <BsTwitter/> <AiOutlineFacebook/>
-
          </div>
-
-         
-          
+          <Icons/>
          </div>
          </>
          
      )
  }
  export default Footer;
+
+
+ // icons component 
+ const Icons = ()=>{
+     return(
+         <>
+         <GoMail/> <BsInstagram onClick={"https://www.instagram.com/holaterapiadelenguaje/?hl=en"}/> <AiFillGithub onClick={"https://github.com/HolaTL"}/> <BsTwitter/> <AiOutlineFacebook/>
+         </>
+     )
+ }
