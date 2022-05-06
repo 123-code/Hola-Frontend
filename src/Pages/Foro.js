@@ -14,13 +14,12 @@ const Foro = ({match})=>{
     }
     return(
         <>
-        <h1 className="text-center"> Foro </h1>
-        <h2 className="text-left"> Preguntas:</h2>
+       
+        <h2 className=" font-mono text-center"> Foro Hola Terapia De Lenguaje </h2>
         
         <Navbar/>
-        <Lista/>
         <AgregarComment/>
-
+        <Lista/>
         </>
     )
 

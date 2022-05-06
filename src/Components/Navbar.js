@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import{AiFillHome} from 'react-icons/ai';
 import{FaQuestion} from 'react-icons/fa';
@@ -37,7 +37,7 @@ return(
 </li>
 </div>
 
-<div>
+<div className= "flex space-x-4">
 <li className="relative">
    <HiUserGroup className='justify-items-start'/>
     <Link to="/nosotros" className = "font-mono">Quienes Somos</Link>

@@ -3,8 +3,10 @@ import React from 'react';
 const Nosotros = ()=>{
     return(
         <>
-        <h1> Nosotros </h1>
-        <h2> Quienes somos </h2>
+       <body className="bg-green-500" >
+       <h1> Nuestro Equipo </h1>
+
+       </body>
         </>
     )
 }

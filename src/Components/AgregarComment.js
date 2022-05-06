@@ -28,16 +28,17 @@ const addquestion = async()=>{
         <div class="flex justify-center">
   <div class="mb-3 xl:w-96">
 
-<label>
-  Nombre:
+    <h1 className="font-mono"> Añadir al Foro </h1>
+
+  Nombre:<label>
   
   <input type="text" value={username} onChange={(event)=>setusername(event.target.value)}/>
 
 </label>
 <div>
-    <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700"
+Pregunta:<label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 text-gray-700"
       > 
-      Pregunta: </label>
+       </label>
     
 </div> 
     <textarea 
@@ -63,8 +64,13 @@ const addquestion = async()=>{
       placeholder="Tu pregunta aquí"
       value={comment} onChange={(event)=>setComment(event.target.value)}/>
 
+<button className="bg-transparent hover:bg-yellow-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-32 h-20  object-scale-right"> Preguntar </button>
   </div>
-  <button> Preguntar </button>
+
+
+  
+  
+
 </div>
 
 

@@ -18,7 +18,7 @@ export default function  ImageSlider (){
         </div>
 
         <div>
-        <img className="object-scale-down h-40 w-45" src={Nina} alt="Niña"/>
+        <img className="object-scale-down h-47 w-47" src={Nina} alt="Niña"/>
         <div><p>Trabajo Con Infantes</p></div>
         
         </div>
