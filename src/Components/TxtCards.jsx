@@ -1,9 +1,9 @@
 import React from "react";
 
-const TxtCards=(CardText)=>{
+const TxtCards=(props)=>{
    return(
        <>
-       {CardText.map((props,index)=>{
+       {props.map((props,index)=>{
            return(
                <>
                <div className="Title">
