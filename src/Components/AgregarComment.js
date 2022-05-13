@@ -64,7 +64,9 @@ Pregunta:<label for="exampleFormControlTextarea1" class="form-label inline-block
       placeholder="Tu pregunta aquí"
       value={comment} onChange={(event)=>setComment(event.target.value)}/>
 
-<button className="bg-transparent hover:bg-yellow-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-32 h-20  object-scale-right"> Preguntar </button>
+<button className="bg-transparent hover:bg-yellow-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border
+ border-blue-500 hover:border-transparent rounded w-32 h-20  object-scale-right" onclick = {addquestion}>
+   Preguntar </button>
   </div>
 
 

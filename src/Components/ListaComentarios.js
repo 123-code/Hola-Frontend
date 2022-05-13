@@ -1,11 +1,33 @@
-import React from "react";
+import React,{useState} from "react";
 import {BiSad} from 'react-icons/bi';
 import './AgregarComment';
+//import Preguntacontent from './Preguntacontent';
 
 
 const MostrarComment=(props)=>{
+    
+    let [nombre,setnombre]=useState("");
+    let[body,setbody] = useState("");
+
+    setnombre = ()=>{
+        let nombre = document.getElementById("Nombre").Nombre;
+        setnombre(nombre);
+
+    }
+setnombre();
+
+    setbody = ()=>{
+        let body = document.getElementById("Pregunta").Pregunta;
+        setbody(body);
+    }
+
+setbody();
+
+ 
+
     let datos = [];
-    // fetchiing data from bakcend to show
+    let nombres = [];
+  
    
 
         fetch("mongodb://localhost:27017/Foro")
@@ -16,6 +38,8 @@ const MostrarComment=(props)=>{
         .then(data=> datos.push[data]
         )
     
+       
+             
     
     if (datos.length === 0){
         return(
@@ -27,6 +51,8 @@ const MostrarComment=(props)=>{
 
     }
         
+    
+
 else{
 
     return(
@@ -38,7 +64,11 @@ else{
            <div claasName = "questions">
             {datos.map((item,index)=>{ return(
             <>
+
+             
             <h2 key = {index}> {item.Nombre}</h2>
+            
+
              <h3 key={index}>{item.Contenido}</h3>   
             </>
             
