@@ -1,4 +1,5 @@
 import React from "react";
+import {BiSad} from 'react-icons/bi';
 import './AgregarComment';
 
 
@@ -7,20 +8,25 @@ const MostrarComment=(props)=>{
     // fetchiing data from bakcend to show
    
 
-        fetch("mongodb://localhost:27017/Foro").then(response=> response.json())
-    .then(data=> datos.push[data.stringify]
-    );
+        fetch("mongodb://localhost:27017/Foro")
+        
+        .then(response=> response.json(),(error)=>{
+            console.info(error);
+        })
+        .then(data=> datos.push[data]
+        )
+    
     
     if (datos.length === 0){
         return(
             <>
-            <h2>No hay comentarios</h2>
+            <h2 className = "text-center font-mono"> Aun No hay comentarios</h2>
+            <BiSad/>
             </>
         )
 
     }
         
-  
 else{
 
     return(
