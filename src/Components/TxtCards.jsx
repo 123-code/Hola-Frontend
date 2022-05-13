@@ -21,13 +21,13 @@ return(
     <>
     <header>
     <div className = "header">
- {Object.keys(CardJson.titles).map((title,index)=>{return(<><h2 key={index}>{title[index]}</h2></>)})}
+ {Object.keys(CardJson.titles).map((title,index)=>{return(<><h2 key={index}>{title.Title[index+1]}</h2></>)})}
      </div>
     </header>
 
     <body>
     <div className = "Body">
- {Object.keys(CardJson.contents).map((content,index)=>{return(<><p key={index}>{content[index]}</p></>)})}
+ {Object.keys(CardJson.contents).map((content,index)=>{return(<><p key={index}>{content.text[index+1]}</p></>)})}
      </div>
     </body>
      </>
