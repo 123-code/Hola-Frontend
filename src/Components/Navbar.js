@@ -15,11 +15,11 @@ return(
 
 <body>
 
-<nav className = "w-65 h-65 shadow-md bg-white px-3 absolute inset-y-0 left-0 ">
+<nav className = "w-65 h-100 shadow-md bg-white px-3 absolute inset-y-0 left-0 ">
 
-<ul>
+<ul className="py-10">
 
-<div className = "flex space-x-4">
+<div className = "flex space-x-4 py-10">
   <li className="relative">
   <AiFillHome className ='justify-items-start'/>
    <Link to="/" className = "font-mono text-slate-300 pt-6">Inicio</Link>
@@ -30,29 +30,29 @@ return(
  
 
 
-<div className= "flex space-x-4">
+<div className= "flex space-x-4 py-10">
   <li className='relative'>
   <FaQuestion className='justify-items-start'/>
   <Link to="/foro" className = "font-mono">Foro</Link>
 </li>
 </div>
 
-<div className= "flex space-x-4">
+<div className= "flex space-x-4 py-10">
 <li className="relative">
    <HiUserGroup className='justify-items-start'/>
     <Link to="/nosotros" className = "font-mono">Quienes Somos</Link>
 </li>
 </div>
 
-<div>
+<div className= "flex space-x-4 py-10">
   <li className="relative">
    <BsFillTelephoneFill/>
-    <Link to="/contacto" className = "font-mono">Contactanos</Link>
+    <Link to="/contacto" className = "font-mono">Contáctanos</Link>
     
 </li>
 </div>
 
-<div>
+<div className= "flex space-x-4 py-10">
 <li className="relative">
    <MdToys/>
     <Link to="/material" className = "font-mono">Material</Link>

@@ -40,8 +40,7 @@ const Main = (props)=>{
 
        <h1> Hola Terapia De Lenguaje </h1>
 
-<p> Especializados en: 
-    .....
+<p className = "font-mono"> somos el mejor centro de terapia de lenguaje del centro del país.
 </p>
 
 
