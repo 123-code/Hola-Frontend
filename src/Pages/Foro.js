@@ -4,12 +4,13 @@ import AgregarComment from '../Components/AgregarComment';
 import Lista from '../Components/ListaComentarios';
 
 const Foro = ({match})=>{   
-    const [Comment,SetComment] = useState({comments:[]});
+    let [Comment,SetComment] = useState({comments:[]});
 
     const fetchdata= async ()=>{
         const data = await fetch(`/api/questions/${match.params.id}`);
         const reqbody = await data.json();
-        SetComment(reqbody);
+        SetComment(Comment = reqbody);
+        console.log(Comment);
 
     }
     return(
@@ -19,6 +20,7 @@ const Foro = ({match})=>{
         
         <Navbar/>
         <AgregarComment/>
+        {fetchdata()}
         <Lista/>
         </>
     )
