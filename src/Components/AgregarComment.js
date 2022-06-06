@@ -1,13 +1,13 @@
 import React,{useState} from 'react';
 
-const AgregarComment = ({setcomment}) => {
+const AgregarComment = () => {
     let[username,setusername]=useState('');
 
     let [comment,setComment]=useState('');
 
 // sending post request to server to add comment.
 const addquestion = async()=>{
-  const result = await fetch(`/api/questions`,{
+  try{ const result = await fetch(`"127.0.0.1:27017/Foro"`,{
   method:'post',
   body:JSON.stringify({ username,text:comment }),
   headers:{
@@ -20,6 +20,10 @@ const addquestion = async()=>{
   setComment(body);
   setusername("");
   setComment("");
+}catch(err){
+  console.log("Ha ocurrido un error");
+    console.log(err);
+  }
 }
     
     return (
@@ -65,7 +69,7 @@ Pregunta:<label for="exampleFormControlTextarea1" class="form-label inline-block
       value={comment} onChange={(event)=>setComment(event.target.value)}/>
 
 <button className="bg-transparent hover:bg-yellow-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border
- border-blue-500 hover:border-transparent rounded w-32 h-20  object-scale-right" onclick = {addquestion}>
+ border-blue-500 hover:border-transparent rounded w-32 h-20  object-scale-right" onclick = {addquestion()}>
    Preguntar </button>
   </div>
 

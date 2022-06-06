@@ -6,7 +6,7 @@ import{HiUserGroup} from 'react-icons/hi';
 import {BsFillTelephoneFill} from 'react-icons/bs';
 import {MdToys} from 'react-icons/md';
 
- 
+ // arreglar para que aparezca static 
 export default function Navbar(){
 
   

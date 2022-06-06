@@ -10,14 +10,14 @@ const MostrarComment=(props)=>{
     let[body,setbody] = useState("");
 
     setnombre = ()=>{
-        let nombre = document.getElementById("Nombre").Nombre;
+        nombre = document.getElementById("Nombre").Nombre;
         setnombre(nombre);
 
     }
 setnombre();
 
     setbody = ()=>{
-        let body = document.getElementById("Pregunta").Pregunta;
+        body = document.getElementById("Pregunta").Pregunta;
         setbody(body);
     }
 
