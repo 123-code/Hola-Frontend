@@ -28,6 +28,7 @@ const CardText = {
     
 }
 const Main = (props)=>{
+    let ciudades = ["Ambato","Riobamba","Toma Terapias Online"];
     return(
         <>
          <Header/>
@@ -50,10 +51,21 @@ const Main = (props)=>{
 
 <h2> Encuentranos En:</h2>
 
-<ul>
 
 
- </ul>
+{
+ciudades.map((ciudades,ciudad)=>{
+    return(
+        <>
+        <ul>
+            <li key={ciudad}>{ciudades}</li>
+        </ul>
+        </>
+    )
+})
+
+}
+
     
 
         </div> 
