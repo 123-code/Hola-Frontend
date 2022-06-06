@@ -7,6 +7,8 @@ import Frase from '../Components/Frase';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
 import TxtCards from '../Components/TxtCards';
+import Nina from '../Img2.jpg';
+import burbujas from '../burbujas.jpeg';
  //<TxtCards CardText/>
 
 // json data, will be passed as props to component
@@ -43,7 +45,7 @@ const Main = (props)=>{
 <p className = "font-mono"> somos el mejor centro de terapia de lenguaje del centro del país.
 </p>
 
-
+<img className = "object-scale-down h-40 w-40" src={burbujas} alt="burbujas"/>
 
 
 <h2> Encuentranos En:</h2>
