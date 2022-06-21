@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useRef,useEffect} from 'react';
 import  Navbar  from '../Components/Navbar';
 import ImageSlider from '../Components/ImageSlider';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -9,6 +9,8 @@ import Header from '../Components/Header';
 import TxtCards from '../Components/TxtCards';
 import Nina from '../Img2.jpg';
 import burbujas from '../burbujas.jpeg';
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
+
  //<TxtCards CardText/>
 
 // json data, will be passed as props to component
@@ -27,6 +29,25 @@ const CardText = {
     },
     
 }
+/*Because google.maps.Map requires an Element 
+as a constructor parameter,
+ useRef is needed to
+ maintain a mutable object that will 
+ persist for the lifetime of the component */
+
+const ShowMap = ()=>{
+    const [map, setMap] = useState();
+    const ref = useRef(null);
+    return (
+        
+useEffect(()=>{
+    setMap(new window.google.maps.Map(ref.current, {}));
+},[ref,map])
+    );
+    
+}
+
+
 const Main = (props)=>{
     let ciudades = ["Ambato","Riobamba","Toma Terapias Online"];
     return(

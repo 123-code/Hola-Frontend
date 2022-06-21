@@ -12,16 +12,18 @@ const Foro = ({match})=>{
         SetComment(Comment = reqbody);
         console.log(Comment);
 
-    }
+    } 
+
     return(
         <>
-       
+       <div className="bg-stone-400">
         <h2 className=" font-mono text-center"> Foro Hola Terapia De Lenguaje </h2>
         
         <Navbar/>
         <AgregarComment/>
-        {fetchdata()}
+    {fetchdata()}
         <Lista/>
+        </div>
         </>
     )
 
