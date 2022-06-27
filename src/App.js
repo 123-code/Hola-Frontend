@@ -41,13 +41,16 @@ export default class App extends React.Component {
         
         </div>
         <div className="page-body">
-         <StickyContainer style={{zIndex:2}}>
-         <Sticky enabled={true} top={0} bottomBoundary={1200}>
-         <Navbar/>
+        <StickyContainer>
+        <Sticky style={{height: '200px', overflow: 'scroll'}} scrollElement={<Navbar/>}>
+     <header>
+        <Navbar/>
+     </header>
          </Sticky>
-         </StickyContainer>
-        
+      
+        </StickyContainer>
 
+    
         </div>
       </Router>
       
