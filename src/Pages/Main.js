@@ -34,6 +34,12 @@ as a constructor parameter,
  useRef is needed to
  maintain a mutable object that will 
  persist for the lifetime of the component */
+ const render = (status =  Status)=>{
+    return(
+        <h1>{status}</h1>
+    )
+};
+
 
 const ShowMap = ()=>{
     const [map, setMap] = useState();
@@ -41,7 +47,10 @@ const ShowMap = ()=>{
     return (
         
 useEffect(()=>{
-    setMap(new window.google.maps.Map(ref.current, {}));
+    if(ref.current && !map){
+        setMap(new window.google.maps.Map(ref.current, {}));
+    }
+    
 },[ref,map])
     );
     
@@ -50,6 +59,7 @@ useEffect(()=>{
 
 const Main = (props)=>{
     let ciudades = ["Ambato","Riobamba","Toma Terapias Online"];
+    let direcciones = ["Calle Sevilla y Vigo","null"];
     return(
         <>
          <Header/>
@@ -75,15 +85,24 @@ const Main = (props)=>{
 
 
 {
+    
+
 ciudades.map((ciudades,ciudad)=>{
+    
     return(
         <>
+        
         <ul>
+            
+            
             <li key={ciudad}>{ciudades}</li>
+           
         </ul>
         </>
     )
 })
+
+
 
 }
 

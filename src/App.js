@@ -17,6 +17,8 @@ import NotFound from './Pages/NotFound';
 import Main from './Pages/Main';
 import Material from './Pages/Material';
 import Navbar from './Components/Navbar';
+import { StickyContainer, Sticky } from 'react-sticky';
+  
  
 // create class component.
 export default class App extends React.Component {
@@ -39,10 +41,17 @@ export default class App extends React.Component {
         
         </div>
         <div className="page-body">
-        <Navbar className ="bottom-0 right-0"/>
+         <StickyContainer style={{zIndex:2}}>
+         <Sticky enabled={true} top={0} bottomBoundary={1200}>
+         <Navbar/>
+         </Sticky>
+         </StickyContainer>
+        
+
         </div>
       </Router>
       
     )
   }
 }
+//  <Navbar className ="bottom-0 right-0"/>

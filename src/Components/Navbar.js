@@ -5,6 +5,7 @@ import{FaQuestion} from 'react-icons/fa';
 import{HiUserGroup} from 'react-icons/hi';
 import {BsFillTelephoneFill} from 'react-icons/bs';
 import {MdToys} from 'react-icons/md';
+import Sticky from 'react-stickynode';
 
  // arreglar para que aparezca static 
 export default function Navbar(){
@@ -12,6 +13,8 @@ export default function Navbar(){
   
 return(
         <>
+
+
 
 <body>
 
