@@ -1,19 +1,16 @@
 import React,{useState} from 'react';
+import axios from 'axios';
 import  Navbar  from '../Components/Navbar';
 import AgregarComment from '../Components/AgregarComment';
 import Lista from '../Components/ListaComentarios';
 
+
 const Foro = ({match})=>{   
+    let [nombre,setnombre] = useState("");
+    let [mycomment,setmycomment] = useState("");
     let [Comment,SetComment] = useState({comments:[]});
 
-    const fetchdata= async ()=>{
-        const data = await fetch(`/api/questions/${match.params.id}`);
-        const reqbody = await data.json();
-        SetComment(Comment = reqbody);
-        console.log(Comment);
-
-    } 
-
+  
     return(
         <>
        <div className="bg-stone-400">
@@ -21,7 +18,6 @@ const Foro = ({match})=>{
         
         <Navbar/>
         <AgregarComment/>
-    {fetchdata()}
         <Lista/>
         </div>
         </>

@@ -1,87 +1,46 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
+import axios from 'axios';
 import {BiSad} from 'react-icons/bi';
 import './AgregarComment';
 //import Preguntacontent from './Preguntacontent';
 
 
-const MostrarComment=(props)=>{
-    
-    let [nombre,setnombre]=useState("");
-    let[body,setbody] = useState("");
+const ListaComentarios = ()=>{
+    const [preguntas,setpreguntas] = useState([]);
 
-    setnombre = ()=>{
-        nombre = document.getElementById("Nombre").Nombre;
-        setnombre(nombre);
 
-    }
-setnombre();
-
-    setbody = ()=>{
-        body = document.getElementById("Pregunta").Pregunta;
-        setbody(body);
-    }
-
-setbody();
-
- 
-
-    let datos = [];
-    let nombres = [];
-  
-   
-
-        fetch("mongodb://localhost:27017/Foro")
-        
-        .then(response=> response.json(),(error)=>{
-            console.info(error);
-        })
-        .then(data=> datos.push[data]
-        )
-    
+    const fetchdata = async ()=>{
        
-             
-    
-    if (datos.length === 0){
-        return(
-            <>
-            <h2 className = "text-center font-mono"> Aun No hay comentarios</h2>
-            <BiSad/>
-            </>
-        )
-
+        try{
+            const response = await axios.get("mongodb://127.0.0.1:27017/foro");
+            setpreguntas(response);
+        }
+        catch(error){
+            console.error(error);
+        }
     }
-        
-    
 
-else{
+    const showpreguntas = ()=>{
+
+            preguntas.map((index,item)=>{
+                return(
+                    <h3 key={index}>{item}</h3>
+                )
+             })
+          
+    }
+
+    useEffect(()=>{
+         fetchdata();   
+    },[])
 
     return(
         <>
-      
-       <h1 className = " font-mono  text-center font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600">
-           Preguntas Recientes </h1>
- 
-           <div claasName = "questions">
-            {datos.map((item,index)=>{ return(
-            <>
-
-             
-            <h2 key = {index}> {item.Nombre}</h2>
-            
-
-             <h3 key={index}>{item.Contenido}</h3>   
-            </>
-            
-            
-            )})}
-            </div>
-        <h2>{props.comment}</h2>
+        {preguntas===""?<BiSad/> : showpreguntas()}
         </>
-    ) 
+    )
+
 }
-
-    
-
+export default ListaComentarios;
   
-}
-export default MostrarComment;
+

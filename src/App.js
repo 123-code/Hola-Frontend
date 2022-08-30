@@ -25,7 +25,7 @@ export default class App extends React.Component {
   render(){
     return(
       
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
          <div className="App">
          
         <Routes>
@@ -41,15 +41,10 @@ export default class App extends React.Component {
         
         </div>
         <div className="page-body">
-        <StickyContainer>
-        <Sticky style={{height: '200px', overflow: 'scroll'}} scrollElement={<Navbar/>}>
-     <header>
+        
         <Navbar/>
-     </header>
-         </Sticky>
-      
-        </StickyContainer>
 
+        
     
         </div>
       </Router>

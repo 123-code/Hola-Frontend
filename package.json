@@ -1,7 +1,8 @@
 {
   "name": "reactinterface",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://123-code.github.io",
   "dependencies": {
     "@craco/craco": "^6.1.1",
     "@googlemaps/react-wrapper": "^1.1.35",
@@ -9,6 +10,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@types/react-stickynode": "^4.0.0",
+    "axios": "^0.27.2",
     "lodash": "^4.17.21",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -23,7 +25,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +51,7 @@
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "autoprefixer": "^9.8.6",
+    "gh-pages": "^4.0.0",
     "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
   }

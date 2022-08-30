@@ -1,30 +1,30 @@
 import React,{useState} from 'react';
+import axios from 'axios';
 
 const AgregarComment = () => {
-    let[username,setusername]=useState('');
-
-    let [comment,setComment]=useState('');
+  let [nombre,setnombre] = useState("");
+  let [mycomment,setmycomment] = useState("");
 
 // sending post request to server to add comment.
-const addquestion = async()=>{
-  try{ const result = await fetch(`"127.0.0.1:27017/Foro"`,{
-  method:'post',
-  body:JSON.stringify({ username,text:comment }),
-  headers:{
-    'Content-Type':'application/json',
+const postquestion = async()=>{
 
-  }
- 
-  });
-  const body = await result.json();
-  setComment(body);
-  setusername("");
-  setComment("");
-}catch(err){
-  console.log("Ha ocurrido un error");
-    console.log(err);
-  }
+  axios({
+      method:'post',
+      url:'https://5008/api/preguntap',
+      data:{
+          Nombre:nombre,
+          Contenido:Comment,
+      }
+  })
+ .then(function (response){
+      console.log(response);
+  }).catch(function(error){
+      console.error(error);
+  })
+
+
 }
+
     
     return (
         <>
@@ -36,7 +36,7 @@ const addquestion = async()=>{
 
   Nombre:<label>
   
-  <input type="text" value={username} onChange={(event)=>setusername(event.target.value)}/>
+  <input type="text" value={nombre} onChange={(event)=>setnombre(event.target.value)}/>
 
 </label>
 <div>
@@ -66,10 +66,10 @@ Pregunta:<label for="exampleFormControlTextarea1" class="form-label inline-block
       id="exampleFormControlTextarea1"
       rows="3"
       placeholder="Tu pregunta aquí"
-      value={comment} onChange={(event)=>setComment(event.target.value)}/>
+      value={mycomment} onChange={(event)=>setmycomment(event.target.value)}/>
 
 <button className="bg-transparent hover:bg-yellow-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border
- border-blue-500 hover:border-transparent rounded w-32 h-20  object-scale-right" onclick = {addquestion()}>
+ border-blue-500 hover:border-transparent rounded w-32 h-20  object-scale-right" onclick = {postquestion()}>
    Preguntar </button>
   </div>
 
