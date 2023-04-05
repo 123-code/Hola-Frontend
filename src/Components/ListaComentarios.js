@@ -6,40 +6,46 @@ import './AgregarComment';
 
 
 const ListaComentarios = ()=>{
-    const [preguntas,setpreguntas] = useState([]);
+    const [form,setform] =  useState({
+        nombre:"",
+        pregunta:[],
+        
+    })
+const fetchdata = ()=>{
+    axios.get('/api/preguntap')
+    .then((response)=>{
+        const data = response.data.pregunta
+        setform({pregunta:data});
+    }).catch((err)=>{
+        console.error(err);
+    })
+}
 
-
-    const fetchdata = async ()=>{
-       
-        try{
-            const response = await axios.get("mongodb://127.0.0.1:27017/foro");
-            setpreguntas(response);
-        }
-        catch(error){
-            console.error(error);
-        }
+const showposts = ()=>{
+     fetchdata();
+    if(form.pregunta.length === 0){
+// return err component
     }
+    return form.pregunta.map((preg,index)=>(
+<div key={index}>
+<h1>{form.nombre}</h1>
+<h2>{form.pregunta}</h2>
+</div>
+    ))
+}
 
-    const showpreguntas = ()=>{
+   return(
+    <>
+    <div>
+    <h1>Posts:</h1>
+    </div>
 
-            preguntas.map((index,item)=>{
-                return(
-                    <h3 key={index}>{item}</h3>
-                )
-             })
-          
-    }
-
-    useEffect(()=>{
-         fetchdata();   
-    },[])
-
-    return(
-        <>
-        {preguntas===""?<BiSad/> : showpreguntas()}
-        </>
-    )
-
+    <div>
+        {showposts()}
+    </div>
+   
+    </>
+   )
 }
 export default ListaComentarios;
   
