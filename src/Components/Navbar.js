@@ -1,75 +1,94 @@
-import React,{useState} from 'react';
-import { Link } from 'react-router-dom';
-import{AiFillHome} from 'react-icons/ai';
-import{FaQuestion} from 'react-icons/fa';
-import{HiUserGroup} from 'react-icons/hi';
-import {BsFillTelephoneFill} from 'react-icons/bs';
-import {MdToys} from 'react-icons/md';
-import Sticky from 'react-stickynode';
+import React, { useState } from "react";
+import "./navbar.css"; 
+//import Shubham_Verma_Resume from "./Shubham_Verma_Resume.pdf";
 
- // arreglar para que aparezca static 
-export default function Navbar(){
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [colorMode, setColorMode] = useState("light");
 
-  
-return(
-        <>
-
-
-
-<body>
-
-<nav className = "w-65 h-100 shadow-md bg-white px-3 absolute inset-y-0 left-0 ">
-
-<ul className="py-10">
-
-<div className = "flex space-x-4 py-10">
-  <li className="relative">
-  <AiFillHome className ='justify-items-start'/>
-   <Link to="/" className = "font-mono text-slate-300 pt-6">Inicio</Link>
-   
-</li>
-
-</div>
- 
-
-
-<div className= "flex space-x-4 py-10">
-  <li className='relative'>
-  <FaQuestion className='justify-items-start'/>
-  <Link to="/foro" className = "font-mono">Foro</Link>
-</li>
-</div>
-
-<div className= "flex space-x-4 py-10">
-<li className="relative">
-   <HiUserGroup className='justify-items-start'/>
-    <Link to="/nosotros" className = "font-mono">Quienes Somos</Link>
-</li>
-</div>
-
-<div className= "flex space-x-4 py-10">
-  <li className="relative">
-   <BsFillTelephoneFill/>
-    <Link to="/contacto" className = "font-mono">Contáctanos</Link>
+  const onButtonClick = () => {
     
-</li>
-</div>
+  };
 
-<div className= "flex space-x-4 py-10">
-<li className="relative">
-   <MdToys/>
-    <Link to="/material" className = "font-mono">Material</Link>
-</li>
-</div>
-
-</ul>
-
-</nav>
-</body>
-
-  </>
-    )
+  return ( 
+    <div id="navFix">
+      <div
+        className="navContainer"
+        style={{ backgroundColor: colorMode === "light" ? "white" : "#1a202c" }}
+      >
+        <div className="navWrapper">
+          <div className="navLeft">
+            <a href="#Home" className="navLogo">
+             Hola TL
+            </a>
+          </div>
+          <div className="navRight">
+            <div className="navIcon" onClick={() => setIsOpen(!isOpen)}>
+              <i
+                className={isOpen ? "fas fa-times" : "fas fa-bars"}
+                style={{
+                  color: colorMode === "light" ? "black" : "white",
+                }}
+              ></i>
+            </div>
+            <ul className={isOpen ? "navMenu active" : "navMenu"}>
+              <li className="navItem">
+                <a href="#Home" className="navLink">
+                  Home
+                </a>
+              </li>
+              <li className="navItem">
+                <a href="#About" className="navLink">
+                  About
+                </a>
+              </li>
+              <li className="navItem">
+                <a href="#Skills" className="navLink">
+                  Skills
+                </a>
+              </li>
+              <li className="navItem">
+                <a href="#Projects" className="navLink">
+                  Projects
+                </a>
+              </li>
+              <li className="navItem">
+                <a href="#Contact" className="navLink">
+                  Contact
+                </a>
+              </li>
+              <li className="navItem">
+                <button
+                  className="navLink resumeLink"
+                  onClick={onButtonClick}
+                  style={{
+                    backgroundColor:
+                      colorMode === "light" ? "#a891b7" : "#f56565",
+                    color: colorMode === "light" ? "white" : "black",
+                  }}
+                >
+                  Resume
+                </button>
+              </li>
+              <li className="navItem">
+                <button
+                  className="navLink"
+                  onClick={() =>
+                    setColorMode(colorMode === "light" ? "dark" : "light")
+                  }
+                  style={{
+                    backgroundColor:
+                      colorMode === "light" ? "#a891b7" : "#f56565",
+                    color: colorMode === "light" ? "white" : "black",
+                  }}
+                >
+                  {colorMode === "light" ? "Dark" : "Light"}
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-
- 

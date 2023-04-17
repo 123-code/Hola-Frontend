@@ -62,6 +62,7 @@ const Main = (props)=>{
     let direcciones = ["Calle Sevilla y Vigo","null"];
     return(
         <>
+        <Navbar/>
          <Header/>
         
         <Frase/>

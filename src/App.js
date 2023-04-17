@@ -29,6 +29,7 @@ export default class App extends React.Component {
          <div className="App">
          
         <Routes>
+        
           <Route path='/' element={<Main/>}/>
           <Route path='/foro' element={<Foro/>}/> 
           <Route path='/nosotros' element={<Nosotros/>}/>
@@ -42,7 +43,7 @@ export default class App extends React.Component {
         </div>
         <div className="page-body">
         
-        <Navbar/>
+        
 
         
     
