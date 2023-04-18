@@ -3,13 +3,24 @@ import React from 'react'
 const Frase = () => {
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 text-center">
-        <h1 className="font-mono text-4xl sm:text-2xl subpixel-antialiased text-lime-500 px-4 py-8 sm:py-16">
+      <div>
+        <h1 className="font-mono">
           Recibir Terapia de lenguaje oportunamente puede marcar la diferencia
         </h1>
+        <style>
+          {`
+            @media (max-width: 800px) {
+              h1 {
+                font-size: 1rem;
+                padding: 2rem 1rem;
+              }
+            }
+          `}
+        </style>
       </div>
     </>
   )
 }
 
 export default Frase;
+

@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import "./navbar.css"; 
+import { Button, Space } from 'antd';
+import {BsSun} from 'react-icons/bs'
+import {BsFillMoonFill} from 'react-icons/bs'
+import {GiHamburgerMenu} from 'react-icons/gi'
 //import Shubham_Verma_Resume from "./Shubham_Verma_Resume.pdf";
 
 export default function Navbar() {
@@ -17,58 +21,35 @@ export default function Navbar() {
         style={{ backgroundColor: colorMode === "light" ? "white" : "#1a202c" }}
       >
         <div className="navWrapper">
-          <div className="navLeft">
-            <a href="#Home" className="navLogo">
+          <div className="navItem">
+            <a href="#Home" className="navLink">
              Hola TL
             </a>
           </div>
-          <div className="navRight">
+          <div className="navItem">
             <div className="navIcon" onClick={() => setIsOpen(!isOpen)}>
               <i
                 className={isOpen ? "fas fa-times" : "fas fa-bars"}
                 style={{
                   color: colorMode === "light" ? "black" : "white",
                 }}
-              ></i>
+              ><GiHamburgerMenu/></i>
             </div>
             <ul className={isOpen ? "navMenu active" : "navMenu"}>
               <li className="navItem">
-                <a href="#Home" className="navLink">
-                  Home
-                </a>
+              <Button type="text">Inicio</Button>
               </li>
               <li className="navItem">
-                <a href="#About" className="navLink">
-                  About
-                </a>
+              <Button type="text">Nosotros</Button>
               </li>
               <li className="navItem">
-                <a href="#Skills" className="navLink">
-                  Skills
-                </a>
+              <Button type="text">Contactanos</Button>
               </li>
               <li className="navItem">
-                <a href="#Projects" className="navLink">
-                  Projects
-                </a>
+              <Button type="text">Material</Button>
               </li>
               <li className="navItem">
-                <a href="#Contact" className="navLink">
-                  Contact
-                </a>
-              </li>
-              <li className="navItem">
-                <button
-                  className="navLink resumeLink"
-                  onClick={onButtonClick}
-                  style={{
-                    backgroundColor:
-                      colorMode === "light" ? "#a891b7" : "#f56565",
-                    color: colorMode === "light" ? "white" : "black",
-                  }}
-                >
-                  Resume
-                </button>
+              <Button type="text">Consultas</Button>
               </li>
               <li className="navItem">
                 <button
@@ -82,13 +63,23 @@ export default function Navbar() {
                     color: colorMode === "light" ? "white" : "black",
                   }}
                 >
-                  {colorMode === "light" ? "Dark" : "Light"}
+                  {colorMode === "light" ? <BsFillMoonFill/> : <BsSun/>}
                 </button>
               </li>
             </ul>
           </div>
         </div>
       </div>
+      <style jsx>{`
+        @media (min-width: 768px) {
+          .navMenu {
+            display: flex !important;
+          }
+          .navIcon {
+            display: none !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
