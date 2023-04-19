@@ -16,6 +16,7 @@ import Contacto from './Pages/Contacto';
 import NotFound from './Pages/NotFound';
 import Main from './Pages/Main';
 import Material from './Pages/Material';
+import Personalized from './Pages/Personalized';
 import Navbar from './Components/Navbar';
 import { StickyContainer, Sticky } from 'react-sticky';
   
@@ -35,6 +36,7 @@ export default class App extends React.Component {
           <Route path='/nosotros' element={<Nosotros/>}/>
           <Route path='/contacto' element={<Contacto/>}/>
           <Route path = '/material' element={<Material/>}/>
+          <Route path = '/personalized' element={<Personalized/>}/>
           <Route path='*' element={<NotFound/>}/>
           
         </Routes>

@@ -1,4 +1,5 @@
 import React,{useState,useRef,useEffect} from 'react';
+
 import  Navbar  from '../Components/Navbar';
 import ImageSlider from '../Components/ImageSlider';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -6,7 +7,7 @@ import Logo from '../Logo.jpg';
 import Frase from '../Components/Frase';
 import Footer from '../Components/Footer';
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
-import Body from './Body.tsx';
+import Body from './Body.jsx';
 
  //<TxtCards CardText/> 
  
@@ -45,13 +46,9 @@ const Main = (props)=>{
     return(
         <>
         <Navbar/>
-        
-        
         <Frase/>
-        
-       
         <ImageSlider/>
-
+        <Body/>
          <Footer/>
         </>
     )
