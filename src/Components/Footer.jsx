@@ -1,43 +1,44 @@
 import React from 'react';
-import Logo from "../Logo.jpg";
-import {GoMail} from 'react-icons/go';
-import {AiOutlineFacebook} from 'react-icons/ai';
-import {BsInstagram} from 'react-icons/bs';
-import {AiFillGithub} from 'react-icons/ai';
-import {BsTwitter} from 'react-icons/bs';
-import{FaQuestion} from 'react-icons/fa';
-import {Link} from 'react-router-dom';
+import {BsFacebook} from 'react-icons/bs';
+import {FaTwitter} from 'react-icons/fa';
+import {FaInstagram} from 'react-icons/fa';
+import {SiEthereum} from 'react-icons/si';
+import { BsPhone } from 'react-icons/bs';
+import './Footer.css'
+//import logo from '../Imgs/logoRB.png'
 
+const Footer = () => {
+  return (
+    <footer style={{ backgroundColor: '#333', color: '#fff' }}>
+      <div className="footer__container" >
 
-
- const Footer = ()=>{
-    
-     //const names = ["Facebook","Github","Twitter","Mail","Instagram","Ayuda"];
-     return(
-        <>
-        <div className = "bg-gray-100">
-        <img className="object-scale-left h-12 w-12" src={Logo} alt="logo"/>
-        <div> <AiOutlineFacebook/> . <AiFillGithub/> .<BsTwitter/>.<GoMail/>.<BsInstagram/>.<FaQuestion/> </div>
+        <div className="footer__column">
+          <h4>Nuestras redes</h4>
+          <ul className="social-icons">
+            <li><a href="#"><i className="fa fa-facebook"></i> <BsFacebook/> </a></li>
+            <li><a href="#"><i className="fa fa-twitter"></i></a><FaTwitter/></li>
+            <li><a href="#"><i className="fa fa-instagram"></i></a><FaInstagram/></li>
+            <li><a href="#"><i className="fa fa-instagram"></i></a><SiEthereum/></li>
+          </ul>
         </div>
-         </>   
-     )
- }
- export default Footer;
- 
-//<div className="flex flex-col justify-center items-center">
+        <div className="footer__column">
+          <h4>Contáctanos</h4>
+          <ul>
+          <li><BsPhone/><a style={{color:'#fff'}} href="#">Cel:+593 0998836981</a></li>
+          <li> Dirección: Cuidadela España Sevilla y Vigo</li>
+          </ul>
+        </div>
+      </div>
 
-const Links = ()=>{
-    const names = ["Facebook","Github","Twitter","Mail","Instagram","Ayuda"];
-    const url = ["https://www.facebook.com/holaterapiadelenguaje/?hl=en",""];
-    return(
-        <>
-        {names.map((name,index,url)=>{
-            return(
-                <>
-                <Link to = {url} key={index}>{name}</Link>
-                </>
-            )
-        })}
-        </>
-    )
-}
+
+      
+      <div className="footer__bottom" >
+        <p>© HolaTL 2023</p>
+        {/*<img src={logo} alt="ReactBuilders" />*/}
+
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

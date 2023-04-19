@@ -4,7 +4,8 @@ import { Button, Space } from 'antd';
 import {BsSun} from 'react-icons/bs'
 import {BsFillMoonFill} from 'react-icons/bs'
 import {GiHamburgerMenu} from 'react-icons/gi'
-//import Shubham_Verma_Resume from "./Shubham_Verma_Resume.pdf";
+import Typography from '@material-ui/core/Typography'
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,9 @@ export default function Navbar() {
         <div className="navWrapper">
           <div className="navItem">
             <a href="#Home" className="navLink">
-             Hola TL
+            <Typography variant="h3" gutterBottom>
+        HolaTL
+      </Typography>
             </a>
           </div>
           <div className="navItem">
