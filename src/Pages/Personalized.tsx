@@ -1,39 +1,77 @@
-import * as React from 'react';
+
+import { useNavigate } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-
+//'/contactform' 
 const Personalized = () => {
+  const navigate=useNavigate();
   
     return (
-        <div>
-            <Card sx={{ maxWidth: 345 }}>
+      <Paper elevation={3}>
+        
+           <Typography gutterBottom variant="h5" component="div">
+                Terapias Personalizadas:
+          </Typography>
+          <div style={{ display: "flex" }}>
+             <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image="https://images.squarespace-cdn.com/content/v1/591a23a25016e1fdd9e011c8/1618876013114-C524U0LUNNGCYLFQQB8G/Carly-28.jpg?format=1500w"
           alt="green iguana"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-                Terapias Personalizadas:
-          </Typography>
+         
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            Terapias personalizadas, se ajustan a las necesidades de cada paciente, en nuestro consultorio o a domicilio.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-         Contáctanos
-        </Button>
       </CardActions>
     </Card>
-        </div>
+
+
+    <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image="https://images.squarespace-cdn.com/content/v1/591a23a25016e1fdd9e011c8/1618876013114-C524U0LUNNGCYLFQQB8G/Carly-28.jpg?format=1500w"
+          alt="green iguana"
+        />
+        <CardContent>
+         
+          <Typography variant="body2" color="text.secondary">
+            Terapias personalizadas, se ajustan a las necesidades de cada paciente, en nuestro consultorio o a domicilio.
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+
+      </CardActions>
+    </Card>
+    </div>
+
+    <Typography gutterBottom variant="h5" component="div">
+                Terapias Personalizadas para todo tipo de dificultades 
+    </Typography>
+
+    <Typography gutterBottom variant="h6" component="div">
+                Contamos con horarios en la mañana y en la tarde
+
+    </Typography>
+
+
+<Button  onClick={()=>{navigate('/contactform')}}variant="contained">Contactanos</Button>
+          </Paper>
+           
+      
     );
-}
+}//
 export default Personalized;

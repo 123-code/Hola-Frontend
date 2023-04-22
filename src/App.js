@@ -18,8 +18,10 @@ import Main from './Pages/Main';
 import Material from './Pages/Material';
 import Personalized from './Pages/Personalized';
 import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 import { StickyContainer, Sticky } from 'react-sticky';
-  
+import {ContactForm} from './Components/ContactForm';
+   
  
 // create class component.
 export default class App extends React.Component {
@@ -27,6 +29,8 @@ export default class App extends React.Component {
     return(
       
       <Router basename={process.env.PUBLIC_URL}>
+         <Navbar/>
+
          <div className="App">
          
         <Routes>
@@ -37,19 +41,15 @@ export default class App extends React.Component {
           <Route path='/contacto' element={<Contacto/>}/>
           <Route path = '/material' element={<Material/>}/>
           <Route path = '/personalized' element={<Personalized/>}/>
+          <Route path = '/contactform' element={<ContactForm/>}/>
           <Route path='*' element={<NotFound/>}/>
           
         </Routes>
         
         
         </div>
-        <div className="page-body">
-        
-        
 
-        
-    
-        </div>
+        <Footer/>
       </Router>
       
     )

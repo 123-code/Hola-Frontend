@@ -45,11 +45,11 @@ const Main = (props)=>{
 
     return(
         <>
-        <Navbar/>
+
         <Frase/>
         <ImageSlider/>
         <Body/>
-         <Footer/>
+        
         </>
     )
 }
