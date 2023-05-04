@@ -17,7 +17,7 @@ const Personalized = () => {
                 Terapias Personalizadas:
           </Typography>
           <div style={{ display: "flex" }}>
-             <Card sx={{ maxWidth: 345 }}>
+             <Card sx={{ maxWidth: 345,marginRight: "50px" }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -37,7 +37,7 @@ const Personalized = () => {
     </Card>
 
 
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345,marginLeft: "30px" }}>
       <CardActionArea>
         <CardMedia
           component="img"
