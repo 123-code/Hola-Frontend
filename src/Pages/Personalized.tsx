@@ -17,12 +17,12 @@ const Personalized = () => {
                 Terapias Personalizadas:
           </Typography>
           <div style={{ display: "flex" }}>
-             <Card sx={{ maxWidth: 345,marginRight: "50px" }}>
+             <Card sx={{ maxWidth: 345,marginRight: "50px",alignItems:"center" }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image="https://images.squarespace-cdn.com/content/v1/591a23a25016e1fdd9e011c8/1618876013114-C524U0LUNNGCYLFQQB8G/Carly-28.jpg?format=1500w"
+          image="https://m.facebook.com/terapiadelenguajeambato/photos/a.1888876034475328/2550628001633458/?type=3&source=57&__tn__=EH-R"
           alt="green iguana"
         />
         <CardContent>
@@ -48,7 +48,7 @@ const Personalized = () => {
         <CardContent>
          
           <Typography variant="body2" color="text.secondary">
-            Terapias personalizadas, se ajustan a las necesidades de cada paciente, en nuestro consultorio o a domicilio.
+            María F Martinez
           </Typography>
         </CardContent>
       </CardActionArea>

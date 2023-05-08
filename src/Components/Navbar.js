@@ -5,15 +5,14 @@ import {BsSun} from 'react-icons/bs'
 import {BsFillMoonFill} from 'react-icons/bs'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import Typography from '@material-ui/core/Typography'
-
+import {useNavigate } from 'react-router-dom'
 
 export default function Navbar() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [colorMode, setColorMode] = useState("light");
+  const navigate = useNavigate();
 
-  const onButtonClick = () => {
-    
-  };
 
   return ( 
     <div id="navFix">
@@ -40,19 +39,19 @@ export default function Navbar() {
             </div>
             <ul className={isOpen ? "navMenu active" : "navMenu"}>
               <li className="navItem">
-              <Button type="text">Inicio</Button>
+              <Button onClick={()=>{navigate("/")}} type="text">Inicio</Button>
               </li>
               <li className="navItem">
-              <Button type="text">Nosotros</Button>
+              <Button type="text" onClick={()=>{navigate("/nosotros")}}>Nosotros</Button>
               </li>
               <li className="navItem">
-              <Button type="text">Contactanos</Button>
+              <Button onClick={()=>{navigate("/contactform")}} type="text">Contactanos</Button>
               </li>
               <li className="navItem">
-              <Button type="text">Material</Button>
+              <Button onClick={()=>{navigate("/material")}} type="text">Material</Button>
               </li>
               <li className="navItem">
-              <Button type="text">Consultas</Button>
+              <Button onClick={()=>{navigate("/nosotros")}} type="text">Consultas</Button>
               </li>
               <li className="navItem">
                 <button
