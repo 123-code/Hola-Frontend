@@ -22,7 +22,7 @@ import Footer from './Components/Footer';
 import { StickyContainer, Sticky } from 'react-sticky';
 import {ContactForm} from './Components/ContactForm';
    
- 
+  
 // create class component.
 export default class App extends React.Component {
   render(){

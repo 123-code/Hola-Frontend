@@ -11,18 +11,18 @@ export function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     city: '',
-    phone: '',
+    phone: '', 
     comment: '',
   });
-
-  const handleChange = (e:any) => {
+ 
+  const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e) => { 
     e.preventDefault();
     console.log(formData);
     // Send the form data to your server or process it as needed.
