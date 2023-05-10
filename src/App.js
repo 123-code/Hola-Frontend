@@ -21,6 +21,8 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import { StickyContainer, Sticky } from 'react-sticky';
 import {ContactForm} from './Components/ContactForm';
+import Grupales from './Pages/Grupales';
+import Evaluaciones from './Pages/Evaluaciones';
    
   
 // create class component.
@@ -42,6 +44,8 @@ export default class App extends React.Component {
           <Route path = '/material' element={<Material/>}/>
           <Route path = '/personalized' element={<Personalized/>}/>
           <Route path = '/contactform' element={<ContactForm/>}/>
+          <Route path = '/grupales' element={<Grupales/>}/>
+          <Route path = '/evaluaciones' element={<Evaluaciones/>}/>
           <Route path='*' element={<NotFound/>}/>
           
         </Routes>

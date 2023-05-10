@@ -30,13 +30,13 @@ export default function NestedList() {
       <ListItemText primary="Terapias Personalizadas" />
       </ListItemButton> 
 
-      <ListItemButton>
+      <ListItemButton onClick={()=>{navigate("/grupales")}}>
       <IoIosPeople />
       <ListItemText primary="Terapias Grupales" />
       </ListItemButton>
 
-      <ListItemButton>
-        <GiChecklist/>
+      <ListItemButton onClick={()=>{navigate("/evaluaciones")}}>
+      <GiChecklist/>
       <ListItemText primary="Evaluaciones" />
       </ListItemButton>
 

@@ -8,14 +8,14 @@ import Paper from '@mui/material/Paper';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import Divider from '@mui/material/Divider';
 //'/contactform' 
-const Personalized = () => {
+const Evaluaciones = () => {
   const navigate=useNavigate();
   
     return (
       <Paper elevation={3}>
         
            <Typography gutterBottom variant="h5" component="div">
-                Terapias Personalizadas: 
+                Evaluaciones:
           </Typography>
           <div style={{ display: "flex", backgroundColor:"#D3D3D3" }}>
              <Card sx={{ maxWidth: 365,marginRight: "50px",  marginLeft: "100px" ,alignItems:"center" }}>
@@ -29,7 +29,7 @@ const Personalized = () => {
         <CardContent>
          
           <Typography variant="body2" color="text.secondary">
-            Terapias personalizadas, se ajustan a las necesidades de cada paciente, en nuestro consultorio o a domicilio.
+            Evaluaciones antes de comenzar terapias
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -49,7 +49,7 @@ const Personalized = () => {
         <CardContent>
          
           <Typography variant="body2" color="text.secondary">
-           Nos adaptamos a las necesidades de cada paciente, para brindar un servicio de calidad.
+          Las evaluaciones detectan problemas del habla en el paciente antes de comenzar terapias
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -75,4 +75,4 @@ const Personalized = () => {
       
     );
 }//
-export default Personalized;
+export default Evaluaciones;
