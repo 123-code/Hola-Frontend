@@ -2,7 +2,7 @@ import React from 'react';
 
 // falta todo el css. 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes,
  
