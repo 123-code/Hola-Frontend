@@ -32,6 +32,9 @@
     "styled-components": "^5.3.9",
     "web-vitals": "^1.0.1"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "craco start",
     "build": "craco build",
