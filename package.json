@@ -2,7 +2,7 @@
   "name": "reactinterface",
   "version": "0.1.0",
   "private": false,
-  "homepage": ".",
+  "homepage": "https://hola-frontend.vercel.app/",
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "@craco/craco": "^6.1.1",
