@@ -1,13 +1,29 @@
-import React from 'react';
+import React,{useState,useRef,useEffect} from 'react';
+
+
+import ImageSlider from '../Components/ImageSlider';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+//import Logo from '../Logo.jpg';
+import Frase from '../Components/Frase';
+
+
+import Body from './Body.jsx';
 
 
 
 
+const Main = (props)=>{
 
-export default function Main() {
-  return (
-    <div>
-      <h1>Main</h1>
-    </div>
-  );
+    return(
+        <>
+
+        <Frase/>
+        <Body/>
+       
+     
+        
+        </>
+    )
 }
+
+export default Main;
