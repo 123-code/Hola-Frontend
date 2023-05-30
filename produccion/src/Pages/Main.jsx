@@ -18,6 +18,7 @@ const Main = (props)=>{
         <>
 
         <Frase/>
+        <ImageSlider/>
         <Body/>
        
      

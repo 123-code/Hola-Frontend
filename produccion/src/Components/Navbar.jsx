@@ -6,6 +6,7 @@ import {BsFillMoonFill} from 'react-icons/bs'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import Typography from '@material-ui/core/Typography'
 import {useNavigate } from 'react-router-dom'
+import '../Logo.jpg'
 
 export default function Navbar() {
 
@@ -22,10 +23,17 @@ export default function Navbar() {
       >
         <div className="navWrapper">
           <div className="navItem">
-            <a href="#Home" className="navLink">
-            <Typography variant="h3" gutterBottom>
-        HolaTL
-      </Typography>
+            <a href="/" className="navLink">
+            <img
+  src={require("../Logo.jpg")}
+  alt="logo"
+  style={{
+    display: 'flex',
+    width: "100px",
+    height: "100px",
+    marginTop: "50px", // Add margin-top for downward spacing
+  }}
+/>
             </a>
           </div>
           <div className="navItem">
@@ -38,22 +46,22 @@ export default function Navbar() {
               ><GiHamburgerMenu/></i>
             </div>
             <ul className={isOpen ? "navMenu active" : "navMenu"}>
-              <li className="navItem">
+              <li className="navItem" style={{ listStyleType: 'none' }}>
               <Button onClick={()=>{navigate("/")}} type="text">Inicio</Button>
               </li>
-              <li className="navItem">
+              <li className="navItem" style={{ listStyleType: 'none' }}>
               <Button type="text" onClick={()=>{navigate("/nosotros")}}>Nosotros</Button>
               </li>
-              <li className="navItem">
+              <li className="navItem" style={{ listStyleType: 'none' }}>
               <Button onClick={()=>{navigate("/contactform")}} type="text">Contactanos</Button>
               </li>
-              <li className="navItem">
+              <li className="navItem" style={{ listStyleType: 'none' }}>
               <Button onClick={()=>{navigate("/material")}} type="text">Material</Button>
               </li>
-              <li className="navItem">
+              <li className="navItem" style={{ listStyleType: 'none' }}>
               <Button onClick={()=>{navigate("/nosotros")}} type="text">Consultas</Button>
               </li>
-              <li className="navItem">
+              <li className="navItem" style={{ listStyleType: 'none' }}>
                 <button
                   className="navLink"
                   onClick={() =>
@@ -68,7 +76,7 @@ export default function Navbar() {
                   {colorMode === "light" ? <BsFillMoonFill/> : <BsSun/>}
                 </button>
               </li>
-            </ul> 
+            </ul>
           </div>
         </div>
       </div>
