@@ -14,6 +14,9 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Personalized from './Pages/Personalized';
 import {ContactForm} from './Components/ContactForm';
+import Nosotros from './Pages/Nosotros';
+import Material from './Pages/Material';  
+import Consultas from './Pages/Consultas';
 
 export default class App extends React.Component {
   render(){
@@ -24,6 +27,9 @@ export default class App extends React.Component {
          <Route path="/" element={<Main/>} />
           <Route path = '/personalized' element={<Personalized/>}/>
           <Route path = '/contactform' element={<ContactForm/>}/>
+          <Route path = '/nosotros' element={<Nosotros/>}/>
+          <Route path = '/material' element={<Material/>}/>
+          <Route path = '/consultas' element={<Consultas/>}/>
          </Routes>
          <Footer/>
       </Router>
