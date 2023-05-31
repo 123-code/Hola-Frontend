@@ -51,7 +51,7 @@ export function ContactForm() {
                   <TextField
                     id="name"
                     name="name"
-                    label="Nombre"
+                    label="Nombre"z
                     variant="standard"
                     value={formData.name}
                     onChange={handleChange}
