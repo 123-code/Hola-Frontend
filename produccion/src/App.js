@@ -12,6 +12,8 @@ import Main from './Pages/Main';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import Personalized from './Pages/Personalized';
+import {ContactForm} from './Components/ContactForm';
 
 export default class App extends React.Component {
   render(){
@@ -20,6 +22,8 @@ export default class App extends React.Component {
         <Navbar/>
          <Routes>
          <Route path="/" element={<Main/>} />
+          <Route path = '/personalized' element={<Personalized/>}/>
+          <Route path = '/contactform' element={<ContactForm/>}/>
          </Routes>
          <Footer/>
       </Router>
