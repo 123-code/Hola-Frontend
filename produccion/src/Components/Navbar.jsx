@@ -62,6 +62,9 @@ export default function Navbar() {
               <Button onClick={()=>{navigate("/nosotros")}} type="text">Consultas</Button>
               </li>
               <li className="navItem" style={{ listStyleType: 'none' }}>
+              <Button onClick={()=>{navigate("/nosotros")}} type="text">Curso de verano</Button>
+              </li>
+              <li className="navItem" style={{ listStyleType: 'none' }}>
                 <button
                   className="navLink"
                   onClick={() =>

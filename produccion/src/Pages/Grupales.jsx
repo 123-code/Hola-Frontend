@@ -10,6 +10,19 @@ import Divider from '@mui/material/Divider';
 //'/contactform' 
 const Grupales = () => {
   const navigate=useNavigate();
+
+  const styles = {
+    '@media (max-width: 600px)': {
+      card: {
+        width: '90%',
+        marginRight: '15px',
+        marginLeft: '15px',
+      },
+      cardMedia: {
+        height: '100px',
+      },
+    },
+  }
   
     return (
       <Paper elevation={3}>
@@ -22,7 +35,7 @@ const Grupales = () => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          sx={styles.cardMedia}
           image="https://scontent.fuio13-1.fna.fbcdn.net/v/t39.30808-6/315234901_551827440284844_2863205950929666644_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=hrGBgSO3CN0AX_rxEJs&_nc_ht=scontent.fuio13-1.fna&oh=00_AfAk0iTcQjTjACPulfJrwcv56SC2yCYnvOm3zHIDZ8qbmQ&oe=647CA7CC"
           alt="green iguana"
         />  
@@ -42,7 +55,8 @@ const Grupales = () => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          sx={styles.cardMedia}
+      
           image="https://scontent.fuio13-1.fna.fbcdn.net/v/t1.6435-9/196655714_4751639298198973_6857031917582852375_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=1ojgInJR1eEAX-59mlR&_nc_ht=scontent.fuio13-1.fna&oh=00_AfDLxgaoCTczHbI6wrz-hUlUIlg52Fmhq-uGjkylgbBUzg&oe=649F2B0A"
           alt="terapias grupales"
         /> 
