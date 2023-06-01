@@ -18,7 +18,8 @@ import Nosotros from './Pages/Nosotros';
 import Material from './Pages/Material';  
 import Consultas from './Pages/Consultas';
 import Grupales from './Pages/Grupales';
-
+import { CursoVeranoForm } from './Pages/CursoVerano'
+ 
 export default class App extends React.Component {
   render(){
     return(
@@ -32,6 +33,7 @@ export default class App extends React.Component {
           <Route path = '/material' element={<Material/>}/>
           <Route path = '/consultas' element={<Consultas/>}/>
           <Route path="/grupales" element={<Grupales/>}/>
+          <Route path="/cursoverano" element={<CursoVeranoForm/>}/>
          </Routes>
          <Footer/>
       </Router>

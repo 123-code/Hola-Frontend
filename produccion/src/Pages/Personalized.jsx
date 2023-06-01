@@ -56,7 +56,7 @@ const Personalized = () => {
    <CardActionArea>
      <CardMedia
        component="img"
-       sx={styles.cardMedia}
+        sx={styles.cardMedia}
        image="https://scontent.fuio13-1.fna.fbcdn.net/v/t1.6435-9/164064192_4507831019246470_3481437221715009133_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=1c3CeF1q1aIAX9Yoaqb&_nc_ht=scontent.fuio13-1.fna&oh=00_AfC1GweVB5z7-PMPeKS8R88hwnto0T4zovthL8BIuUMJaQ&oe=6481137E"
        alt="terapias personalizadas"
      />
