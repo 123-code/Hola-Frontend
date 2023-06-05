@@ -57,7 +57,7 @@ const Evaluaciones= () => {
      <CardMedia
        component="img"
         sx={styles.cardMedia}
-       image="https://scontent.fuio4-1.fna.fbcdn.net/v/t39.30808-6/285519312_5899338756762349_5944444394375018805_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a26aad&_nc_ohc=YZds0pwdWTUAX8Oik9S&_nc_ht=scontent.fuio4-1.fna&oh=00_AfBM3u7WiH-zB1RBIWMhAspoyByyuL-0Ws1fAgU5dkLZtQ&oe=6482B7E3"
+       image="https://scontent.fuio13-1.fna.fbcdn.net/v/t1.6435-9/164064192_4507831019246470_3481437221715009133_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=1c3CeF1q1aIAX9Yoaqb&_nc_ht=scontent.fuio13-1.fna&oh=00_AfC1GweVB5z7-PMPeKS8R88hwnto0T4zovthL8BIuUMJaQ&oe=6481137E"
        alt="terapias personalizadas"
      />
      <CardContent>
