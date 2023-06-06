@@ -12,20 +12,20 @@ import Contactanos from '../Contactanos.jpg'
 export function ContactForm() {
   const [formData, setFormData] = useState({
     Name: '',
-    city: '',
-    phone: '', 
-    comment: '',
+    Ciudad: '',
+    Telefono: '', 
+    Comentario: '',
   });
  
 
 const GOLANG_POST_API = "https://backend-5.hop.sh/reserves"
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+const handleChange = (e) => {
+  setFormData((prevFormData) => ({
+    ...prevFormData,
+    [e.target.name]: e.target.value,
+  }));
+};
 
 
   const SubmitData = async()=>{
@@ -74,29 +74,29 @@ const GOLANG_POST_API = "https://backend-5.hop.sh/reserves"
                     onChange={handleChange}
                   />
                   <TextField
-                    id="city"
-                    name="city"
+                    id="Ciudad"
+                    name="Ciudad"
                     label="Ciudad"
                     variant="standard"
-                    value={formData.city}
+                    value={formData.Ciudad}
                     onChange={handleChange}
                   />
                   <TextField
-                    id="phone"
-                    name="phone"
+                    id="Telefono"
+                    name="Telefono"
                     label="Telefono"
                     variant="standard"
-                    value={formData.phone}
+                    value={formData.Telefono}
                     onChange={handleChange}
                   />
                   <TextField
-                    id="comment"
-                    name="comment"
+                    id="Comentario"
+                    name="Comentario"
                     label="Comentario"
                     multiline
                     maxRows={4}
                     variant="filled"
-                    value={formData.comment}
+                    value={formData.Comentario}
                     onChange={handleChange}
                   />
                 </div>
