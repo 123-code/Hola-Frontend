@@ -22,7 +22,47 @@ const Evaluaciones= () => {
         height: '100px',
       },
     },
-  }
+    '@media (max-width: 768px) and (orientation: landscape)': {
+      card: {
+        width: '50%',
+        marginRight: '15px',
+        marginLeft: '15px',
+      },
+      cardMedia: {
+        height: '200px',
+      },
+    },
+    '@media (max-width: 768px) and (orientation: portrait)': {
+      card: {
+        width: '90%',
+        marginRight: '15px',
+        marginLeft: '15px',
+      },
+      cardMedia: {
+        height: '200px',
+      },
+    },
+    '@media (max-width: 1024px) and (orientation: landscape)': {
+      card: {
+        width: '50%',
+        marginRight: '15px',
+        marginLeft: '15px',
+      },
+      cardMedia: {
+        height: '300px',
+      },
+    },
+    '@media (max-width: 1024px) and (orientation: portrait)': {
+      card: {
+        width: '90%',
+        marginRight: '15px',
+        marginLeft: '15px',
+      },
+      cardMedia: {
+        height: '300px',
+      },
+    },
+  };
   
     return (
       <div style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#D3D3D3', padding: '20px' }}>
