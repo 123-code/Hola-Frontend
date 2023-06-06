@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import axios from 'axios';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
@@ -16,6 +17,9 @@ export function ContactForm() {
     comment: '',
   });
  
+
+const GOLANG_POST_API = "https://backend-5.hop.sh/reserves"
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -23,10 +27,22 @@ export function ContactForm() {
     });
   };
 
+
+  const SubmitData = async()=>{
+    try{
+      await axios.post(GOLANG_POST_API,formData)
+    }catch(err){
+      console.error(err)
+    }
+ 
+
+  }
+
   const handleSubmit = (e) => { 
     e.preventDefault();
     console.log(formData);
     // Send the form data to your server or process it as needed.
+    SubmitData()
   };
 
   return (
