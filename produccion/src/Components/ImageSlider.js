@@ -3,6 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 import Nino from '../img1.jpg';
 import Nina from '../Img2.jpg';
+import Bebe from '../Bebe.jpg';
 //import SimpleImageSlider from "react-simple-image-slider";
 
 export default function  ImageSlider (){
@@ -11,7 +12,7 @@ export default function  ImageSlider (){
         <body className=" bg-yellow-500 text-center">
             <Carousel showArrows={true} showThumbs={false} showStatus={false}>
          <div>
-            <img className="object-scale-down h-47 w-47" src = {Nino} alt="Niño"/>
+            <img className="object-scale-down h-47 w-47" src = {Bebe} alt="Niño"/>
             <p className="Trabajo con niños">Trabajo con niños</p>
  
             

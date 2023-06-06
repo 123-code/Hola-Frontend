@@ -6,10 +6,11 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import TextField from '@mui/material/TextField';
+import Contactanos from '../Contactanos.jpg'
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
-    name: '',
+    Name: '',
     city: '',
     phone: '', 
     comment: '',
@@ -40,7 +41,7 @@ export function ContactForm() {
               <CardMedia
                 component="img"
                 height="400"
-                image="https://scontent.fuio13-1.fna.fbcdn.net/v/t39.30808-6/310979442_517482633719325_8368007389971193705_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qnQRZUw60O4AX_nhxCz&_nc_ht=scontent.fuio13-1.fna&oh=00_AfCI737JzhtH1rUP2RR4O4FxAk8XlGoXmg6O8RPxk_V_Lg&oe=647C19ED"
+                image={Contactanos}
                 alt="green iguana"
               />
               <CardContent>
@@ -49,11 +50,11 @@ export function ContactForm() {
                 </Typography>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                   <TextField
-                    id="name"
-                    name="name"
-                    label="Nombre"z
+                    id="Name"
+                    name="Name"
+                    label="Nombre"
                     variant="standard"
-                    value={formData.name}
+                    value={formData.Name}
                     onChange={handleChange}
                   />
                   <TextField
