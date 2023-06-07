@@ -1,21 +1,24 @@
 import React, { useState } from "react";
-import "./navbar.css"; 
+import { Link, useNavigate } from 'react-router-dom';
+import "./navbar.css";
 import { Button, Space } from 'antd';
-import {BsSun} from 'react-icons/bs'
-import {BsFillMoonFill} from 'react-icons/bs'
-import {GiHamburgerMenu} from 'react-icons/gi'
-import Typography from '@material-ui/core/Typography'
-import {useNavigate } from 'react-router-dom'
-import '../Logo.jpg'
+import { BsSun } from 'react-icons/bs';
+import { BsFillMoonFill } from 'react-icons/bs';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { RiCloseLine } from 'react-icons/ri';
+import Typography from '@material-ui/core/Typography';
+import '../Logo.jpg';
 
 export default function Navbar() {
-
   const [isOpen, setIsOpen] = useState(false);
   const [colorMode, setColorMode] = useState("light");
   const navigate = useNavigate();
 
+  const handleToggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
-  return ( 
+  return (
     <div id="navFix">
       <div
         className="navContainer"
@@ -23,61 +26,48 @@ export default function Navbar() {
       >
         <div className="navWrapper">
           <div className="navItem">
-            <a href="/" className="navLink">
-            <img
-  src={require("../Logo.jpg")}
-  alt="logo"
-  style={{
-    display: 'flex',
-    width: "100px",
-    height: "100px",
-    marginTop: "50px", // Add margin-top for downward spacing
-  }}
-/>
-            </a>
+            <Link to="/" className="navLink">
+              <img
+                src={require("../Logo.jpg")}
+                alt="logo"
+                style={{
+                  display: 'flex',
+                  width: "100px",
+                  height: "100px",
+                  marginTop: "50px",
+                }}
+              />
+            </Link>
           </div>
           <div className="navItem">
-            <div className="navIcon" onClick={() => setIsOpen(!isOpen)}>
+            <div className="navIcon" onClick={handleToggleMenu}>
               <i
                 className={isOpen ? "fas fa-times" : "fas fa-bars"}
                 style={{
                   color: colorMode === "light" ? "black" : "white",
                 }}
-              ><GiHamburgerMenu/></i>
+              >
+                {isOpen ? <RiCloseLine /> : <GiHamburgerMenu />}
+              </i>
             </div>
             <ul className={isOpen ? "navMenu active" : "navMenu"}>
-              <li className="navItem" style={{ listStyleType: 'none' }}>
-              <Button onClick={()=>{navigate("/")}} type="text">Inicio</Button>
+              <li className="navItem">
+                <Button onClick={() => navigate("/")} type="text">Inicio</Button>
               </li>
-              <li className="navItem" style={{ listStyleType: 'none' }}>
-              <Button type="text" onClick={()=>{navigate("/nosotros")}}>Nosotros</Button>
+              <li className="navItem">
+                <Button onClick={() => navigate("/nosotros")} type="text">Nosotros</Button>
               </li>
-              <li className="navItem" style={{ listStyleType: 'none' }}>
-              <Button onClick={()=>{navigate("/contactform")}} type="text">Contactanos</Button>
+              <li className="navItem">
+                <Button onClick={() => navigate("/contactform")} type="text">Contáctanos</Button>
               </li>
-              <li className="navItem" style={{ listStyleType: 'none' }}>
-              <Button onClick={()=>{navigate("/material")}} type="text">Material</Button>
+              <li className="navItem">
+                <Button onClick={() => navigate("/material")} type="text">Material</Button>
               </li>
-              <li className="navItem" style={{ listStyleType: 'none' }}>
-              <Button onClick={()=>{navigate("/nosotros")}} type="text">Consultas</Button>
+              <li className="navItem">
+                <Button onClick={() => navigate("/consultas")} type="text">Consultas</Button>
               </li>
-              <li className="navItem" style={{ listStyleType: 'none' }}>
-              <Button onClick={()=>{navigate("/cursoverano")}} type="text">Curso de verano</Button>
-              </li>
-              <li className="navItem" style={{ listStyleType: 'none' }}>
-                <button
-                  className="navLink"
-                  onClick={() =>
-                    setColorMode(colorMode === "light" ? "dark" : "light")
-                  }
-                  style={{
-                    backgroundColor:
-                      colorMode === "light" ? "#a891b7" : "#f56565",
-                    color: colorMode === "light" ? "white" : "black",
-                  }}
-                >
-                  {colorMode === "light" ? <BsFillMoonFill/> : <BsSun/>}
-                </button>
+              <li className="navItem">
+                <Button onClick={() => navigate("/cursoverano")} type="text">Curso de Verano</Button>
               </li>
             </ul>
           </div>

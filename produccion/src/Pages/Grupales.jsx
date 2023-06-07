@@ -12,11 +12,15 @@ const Grupales = () => {
   const navigate=useNavigate();
 
   const styles = {
+    Width: 500,marginRight: "30px",  marginLeft: "30px" ,alignItems:"center",
+
     '@media (max-width: 600px)': {
       card: {
+
         width: '90%',
         marginRight: '15px',
-        marginLeft: '15px',
+        marginLeft: '5px',
+
       },
       cardMedia: {
         height: '100px',
@@ -31,7 +35,7 @@ const Grupales = () => {
                 Terapias Grupales: 
           </Typography>
           <div style={{ display: "flex", backgroundColor:"#D3D3D3" }}>
-             <Card sx={{ Width: 500,marginRight: "30px",  marginLeft: "30px" ,alignItems:"center" }}>
+             <Card sx={{ styles }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -51,7 +55,7 @@ const Grupales = () => {
     </Card>
 
 
-    <Card sx={{ Width: 400,marginLeft: "30px",alignItems:"center",marginRight:"30px" }}>
+    <Card sx={{ styles }}>
       <CardActionArea>
         <CardMedia
           component="img"

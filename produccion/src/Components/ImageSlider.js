@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 
-import Nino from '../img1.jpg';
+//import Nino from '../img1.jpg';
 import Nina from '../Img2.jpg';
 import Bebe from '../Bebe.jpg';
 //import SimpleImageSlider from "react-simple-image-slider";

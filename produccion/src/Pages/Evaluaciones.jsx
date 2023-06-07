@@ -12,57 +12,24 @@ const Evaluaciones= () => {
   const navigate=useNavigate();
 
   const styles = {
-    '@media (max-width: 600px)': {
+    maxWidth: 365,
+    marginRight: "30px",
+    marginLeft: "100px",
+    alignItems: "center",
+    '@media (max-width: 800px)': {
       card: {
         width: '90%',
-        marginRight: '15px',
-        marginLeft: '15px',
+        marginRight: '5px',
+        marginLeft: '5px',
       },
       cardMedia: {
         height: '100px',
+        width: '100%',
+        objectFit: 'cover',
       },
     },
-    '@media (max-width: 768px) and (orientation: landscape)': {
-      card: {
-        width: '50%',
-        marginRight: '15px',
-        marginLeft: '15px',
-      },
-      cardMedia: {
-        height: '200px',
-      },
-    },
-    '@media (max-width: 768px) and (orientation: portrait)': {
-      card: {
-        width: '90%',
-        marginRight: '15px',
-        marginLeft: '15px',
-      },
-      cardMedia: {
-        height: '200px',
-      },
-    },
-    '@media (max-width: 1024px) and (orientation: landscape)': {
-      card: {
-        width: '50%',
-        marginRight: '15px',
-        marginLeft: '15px',
-      },
-      cardMedia: {
-        height: '300px',
-      },
-    },
-    '@media (max-width: 1024px) and (orientation: portrait)': {
-      card: {
-        width: '90%',
-        marginRight: '15px',
-        marginLeft: '15px',
-      },
-      cardMedia: {
-        height: '300px',
-      },
-    },
-  };
+  }
+  
   
     return (
       <div style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#D3D3D3', padding: '20px' }}>
@@ -72,7 +39,7 @@ const Evaluaciones= () => {
                 Evaluaciones: 
        </Typography>
        <div style={{ display: "flex"}}>
-          <Card sx={{ maxWidth: 365,marginRight: "30px",  marginLeft: "100px" ,alignItems:"center" }}>
+          <Card sx={{ styles }}>
    <CardActionArea>
      <CardMedia
        component="img"
@@ -92,12 +59,12 @@ const Evaluaciones= () => {
  </Card>
 
 
- <Card sx={{ maxWidth: 345,marginLeft: "30px",alignItems:"center",marginRight: "30px"  }}>
+ <Card sx={{ styles }}>
    <CardActionArea>
      <CardMedia
        component="img"
         sx={styles.cardMedia}
-       image="https://scontent.fuio13-1.fna.fbcdn.net/v/t1.6435-9/164064192_4507831019246470_3481437221715009133_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=1c3CeF1q1aIAX9Yoaqb&_nc_ht=scontent.fuio13-1.fna&oh=00_AfC1GweVB5z7-PMPeKS8R88hwnto0T4zovthL8BIuUMJaQ&oe=6481137E"
+       image="https://i.ibb.co/YDPjcTk/Graduacion.jpg"
        alt="terapias personalizadas"
      />
      <CardContent>
