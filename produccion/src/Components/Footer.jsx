@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="footer__column">
           <h4>Nuestras redes</h4>
           <ul className="social-icons">
-            <li><a href="#"><i className="fa fa-facebook"></i> <BsFacebook/> </a></li>
+            <li><a href="https://www.facebook.com/terapiadelenguajeambato/?locale=es_LA"><i className="fa fa-facebook"></i> <BsFacebook/> </a></li>
             <li><a href="#"><i className="fa fa-twitter"></i></a><FaTwitter/></li>
             <li><a href="#"><i className="fa fa-instagram"></i></a><FaInstagram/></li>
             <li><a href="#"><i className="fa fa-instagram"></i></a><SiEthereum/></li>

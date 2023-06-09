@@ -38,6 +38,8 @@ export default function Navbar() {
                 }}
               />
             </Link>
+     
+           
           </div>
           <div className="navItem">
             <div className="navIcon" onClick={handleToggleMenu}>
@@ -50,26 +52,26 @@ export default function Navbar() {
                 {isOpen ? <RiCloseLine /> : <GiHamburgerMenu />}
               </i>
             </div>
-            <ul className={isOpen ? "navMenu active" : "navMenu"}>
-              <li className="navItem">
-                <Button onClick={() => navigate("/")} type="text">Inicio</Button>
-              </li>
-              <li className="navItem">
-                <Button onClick={() => navigate("/nosotros")} type="text">Nosotros</Button>
-              </li>
-              <li className="navItem">
-                <Button onClick={() => navigate("/contactform")} type="text">Contáctanos</Button>
-              </li>
-              <li className="navItem">
-                <Button onClick={() => navigate("/material")} type="text">Material</Button>
-              </li>
-              <li className="navItem">
-                <Button onClick={() => navigate("/consultas")} type="text">Consultas</Button>
-              </li>
-              <li className="navItem">
-                <Button onClick={() => navigate("/cursoverano")} type="text">Curso de Verano</Button>
-              </li>
-            </ul>
+            <ul className={isOpen ? "navMenu active" : "navMenu"} style={{ listStyleType: 'none' }}>
+  <li className="navItem">
+    <Button onClick={() => navigate("/")} type="text">Inicio</Button>
+  </li>
+  <li className="navItem">
+    <Button onClick={() => navigate("/nosotros")} type="text">Nosotros</Button>
+  </li>
+  <li className="navItem">
+    <Button onClick={() => navigate("/contactform")} type="text">Contáctanos</Button>
+  </li>
+  <li className="navItem">
+    <Button onClick={() => navigate("/material")} type="text">Material</Button>
+  </li>
+  <li className="navItem">
+    <Button onClick={() => navigate("/consultas")} type="text">Consultas</Button>
+  </li>
+  <li className="navItem">
+    <Button onClick={() => navigate("/cursoverano")} type="text">Curso de Verano</Button>
+  </li>
+</ul>
           </div>
         </div>
       </div>

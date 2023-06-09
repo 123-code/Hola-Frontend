@@ -9,12 +9,10 @@ const Frase = () => {
   return (
     <>
       <div>
-        <Typography variant="h2" gutterBottom>
-        Recibir Terapia de lenguaje oportunamente puede marcar la diferencia
-      </Typography>
-        <h1 className="font-mono">
-         
-        </h1>
+      <Typography variant="h2" gutterBottom >
+  Recibir Terapia de lenguaje oportunamente puede marcar la diferencia
+</Typography>
+       
         <style>
           {`
             @media (max-width: 800px) {

@@ -20,6 +20,7 @@ import Consultas from './Pages/Consultas';
 import Grupales from './Pages/Grupales';
 import { CursoVeranoForm } from './Pages/CursoVerano'
 import Evaluaciones from './Pages/Evaluaciones';
+import ThankYouPage from './Pages/FormSent';
 export default class App extends React.Component {
   render(){
     return(
@@ -35,6 +36,7 @@ export default class App extends React.Component {
           <Route path="/grupales" element={<Grupales/>}/>
           <Route path="/cursoverano" element={<CursoVeranoForm/>}/>
           <Route path="/evaluaciones" element={<Evaluaciones/>}/>
+          <Route path="/thankyoupage" element={<ThankYouPage/>}/>
          </Routes>
          <Footer/>
       </Router>

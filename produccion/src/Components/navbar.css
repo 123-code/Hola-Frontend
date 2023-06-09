@@ -10,12 +10,18 @@
   .navItem {
     width: 100%;
     text-align: center;
+    
+
+  }
+  ul {
+    list-style-type: none;
   }
 
   .navLink{
     display: block;
     padding: 10px;
     text-align: center;
+ 
   }
 
   .navLink:hover {
