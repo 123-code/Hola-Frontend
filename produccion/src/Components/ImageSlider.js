@@ -1,34 +1,53 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-//import Nino from '../img1.jpg';
 import Nina from '../Img2.jpg';
 import Bebe from '../Bebe.jpg';
-//import SimpleImageSlider from "react-simple-image-slider";
 
-export default function  ImageSlider (){
-    return(
-        <>
-        <body className=" bg-yellow-500 text-center">
-            <Carousel showArrows={true} showThumbs={false} showStatus={false}>
-         <div>
-            <img className="object-scale-down h-47 w-47" src = {Bebe} alt="Niño"/>
-            <p className="Trabajo con niños">Trabajo con niños</p>
- 
-            
+const ImageSlider = () => {
+  const carouselStyle = {
+    backgroundColor: '#ffcc00',
+    textAlign: 'center',
+    padding: '20px',
+  };
+
+  const imageStyle = {
+    maxWidth: '800px',
+    height: 'auto',
+    borderRadius: '10px',
+  };
+
+  const captionStyle = {
+    color: '#fff',
+    fontSize: '16px',
+    marginTop: '10px',
+  };
+
+  const mediaQueryStyle = `
+    @media (max-width: 500px) {
+      img {
+        max-width: 300px;
+      }
+    }
+  `;
+
+  return (
+    <div style={carouselStyle}>
+      <style>{mediaQueryStyle}</style>
+      <Carousel showArrows={true} showThumbs={false} showStatus={false}>
+        <div>
+          <img style={imageStyle} src={Bebe} alt="Niño" />
+          <p style={captionStyle}>Trabajo con niños</p>
         </div>
 
         <div>
-        <img className="object-scale-down h-47 w-47" src={Nina} alt="Niña"/>
-        <div><p>Trabajo Con Infantes</p></div>
-        
+          <img style={imageStyle} src={Nina} alt="Niña" />
+          <p style={captionStyle}>Trabajo con infantes</p>
         </div>
-    
-</Carousel>
-</body>
-        
-        </>
-    )
-    
-     
-}
+      </Carousel>
+    </div>
+  );
+};
+
+export default ImageSlider;
