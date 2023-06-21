@@ -38,7 +38,7 @@ const Personalized = () => {
                 <CardMedia
                   component="img"
                   sx={styles.cardMedia}
-                  image="https://pbs.twimg.com/media/Ez6OZxJX0Aca0bL?format=jpg&name=medium"
+                  image="https://pbs.twimg.com/media/EzrwWnWX0AU7jNd?format=jpg&name=900x900"
                   alt="green iguana"
                   style={{ objectFit: 'cover' }}
                 />
@@ -52,11 +52,11 @@ const Personalized = () => {
               </CardActions>
             </Card>
           </div>
-          <Divider light />
+
           <Typography gutterBottom variant="h5" component="div" style={{ textAlign: 'center', marginTop: '20px' }}>
             Terapias Personalizadas para todo tipo de dificultades
           </Typography>
-          <Divider light style={{ margin: '20px 0' }} />
+
           <Typography gutterBottom variant="h6" component="div" style={{ textAlign: 'center' }}>
             Contamos con horarios en la mañana y en la tarde
           </Typography>

@@ -38,7 +38,7 @@ const Personalized = () => {
                 <CardMedia
                   component="img"
                   sx={styles.cardMedia}
-                  image="https://scontent.fuio13-1.fna.fbcdn.net/v/t1.6435-9/142410704_4336052596424314_5658935811337539101_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=pU3kREvI-U0AX84M4D7&_nc_ht=scontent.fuio13-1.fna&oh=00_AfCbfZgwDJO5dvtmbkq9n-XdAneouB5FO_Qn03SbB9fQiQ&oe=6480EE6C"
+                  image="https://pbs.twimg.com/media/Ez6OZxJX0Aca0bL?format=jpg&name=medium"
                   alt="green iguana"
                   style={{ objectFit: 'cover' }}
                 />
@@ -52,11 +52,11 @@ const Personalized = () => {
               </CardActions>
             </Card>
           </div>
-          <Divider light />
+
           <Typography gutterBottom variant="h5" component="div" style={{ textAlign: 'center', marginTop: '20px' }}>
             Terapias Personalizadas para todo tipo de dificultades
           </Typography>
-          <Divider light style={{ margin: '20px 0' }} />
+
           <Typography gutterBottom variant="h6" component="div" style={{ textAlign: 'center' }}>
             Contamos con horarios en la mañana y en la tarde
           </Typography>
@@ -66,5 +66,4 @@ const Personalized = () => {
     </>
   );
 }
-
 export default Personalized;
