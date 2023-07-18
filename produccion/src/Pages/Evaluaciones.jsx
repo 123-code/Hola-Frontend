@@ -15,7 +15,7 @@ const Personalized = () => {
     marginRight: "30px",
     marginLeft: "100px",
     alignItems: "center",
-    '@media (max-width: 600px)': {
+    '@media (min-width: 600px)': {
       card: {
         width: '90%',
         marginRight: '5px',
@@ -54,7 +54,7 @@ const Personalized = () => {
           </div>
 
           <Typography gutterBottom variant="h5" component="div" style={{ textAlign: 'center', marginTop: '20px' }}>
-            Terapias Personalizadas para todo tipo de dificultades
+          En las evaluaciones usamos tests estandarizados esclusivos de terapia de lenguaje, deacuerdo a cada edad que presente cada paciente.
           </Typography>
 
           <Typography gutterBottom variant="h6" component="div" style={{ textAlign: 'center' }}>

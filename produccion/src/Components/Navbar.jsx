@@ -32,9 +32,10 @@ export default function Navbar() {
                 alt="logo"
                 style={{
                   display: 'flex',
-                  width: "100px",
-                  height: "100px",
+                  width: "200px",
+                  height: "200px",
                   marginTop: "50px",
+                  marginBottom: "none",
                 }}
               />
             </Link>

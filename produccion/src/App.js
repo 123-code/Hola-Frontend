@@ -18,12 +18,12 @@ import Nosotros from './Pages/Nosotros';
 import Material from './Pages/Material';  
 import Consultas from './Pages/Consultas';
 import Grupales from './Pages/Grupales';
-import { CursoVeranoForm } from './Pages/CursoVerano'
+import  CursoVeranoForm  from './Pages/CursoVerano'
 import Evaluaciones from './Pages/Evaluaciones';
 import ThankYouPage from './Pages/FormSent';
 export default class App extends React.Component {
   render(){
-    return(
+    return( 
       <Router>
         <Navbar/>
          <Routes>

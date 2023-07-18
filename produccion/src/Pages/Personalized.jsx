@@ -54,11 +54,11 @@ const Personalized = () => {
           </div>
 
           <Typography gutterBottom variant="h5" component="div" style={{ textAlign: 'center', marginTop: '20px' }}>
-            Terapias Personalizadas para todo tipo de dificultades
+            Terapias Individuales
           </Typography>
 
           <Typography gutterBottom variant="h6" component="div" style={{ textAlign: 'center' }}>
-            Contamos con horarios en la mañana y en la tarde
+          Proporcionamos a tu hijo las herramientas necesarias para superar dificultades en el habla y el lenguaje, para que pueda expresarse de una forma clara y efectiva.
           </Typography>
           <Button onClick={() => { navigate('/contactform') }} variant="contained" style={{ display: 'block', margin: '20px auto' }}>Contáctanos</Button>
         </Paper>

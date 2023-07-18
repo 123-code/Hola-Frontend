@@ -44,7 +44,7 @@ const Personalized = () => {
                 />
                 <CardContent>
                   <Typography variant="body2" color="text.secondary" style={{ textAlign: 'justify' }}>
-                    Terapias personalizadas, se ajustan a las necesidades de cada paciente, en nuestro consultorio o a domicilio.
+                  
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -54,11 +54,11 @@ const Personalized = () => {
           </div>
 
           <Typography gutterBottom variant="h5" component="div" style={{ textAlign: 'center', marginTop: '20px' }}>
-            Terapias Personalizadas para todo tipo de dificultades
+            Terapias Grupales
           </Typography>
 
           <Typography gutterBottom variant="h6" component="div" style={{ textAlign: 'center' }}>
-            Contamos con horarios en la mañana y en la tarde
+          trabajamos en actividades grupales  para incentivar las habilidades adquiridas
           </Typography>
           <Button onClick={() => { navigate('/contactform') }} variant="contained" style={{ display: 'block', margin: '20px auto' }}>Contáctanos</Button>
         </Paper>
