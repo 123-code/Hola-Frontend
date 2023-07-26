@@ -21,6 +21,7 @@ import Grupales from './Pages/Grupales';
 import  CursoVeranoForm  from './Pages/CursoVerano'
 import Evaluaciones from './Pages/Evaluaciones';
 import ThankYouPage from './Pages/FormSent';
+import Chat from './Pages/Chat';
 export default class App extends React.Component {
   render(){
     return( 
@@ -37,6 +38,7 @@ export default class App extends React.Component {
           <Route path="/cursoverano" element={<CursoVeranoForm/>}/>
           <Route path="/evaluaciones" element={<Evaluaciones/>}/>
           <Route path="/thankyoupage" element={<ThankYouPage/>}/>
+          <Route path="/chat" element={<Chat/>}/>
          </Routes>
          <Footer/>
       </Router>
