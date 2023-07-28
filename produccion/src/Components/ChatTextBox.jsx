@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import Typography from '@material-ui/core/Typography'
-
+import { BiPaperPlane } from "react-icons/bi";
 
 const inputStyle = {
     padding: '12px 16px',
@@ -10,8 +10,22 @@ const inputStyle = {
     borderRadius: '24px',
     fontSize: '16px',
     color: '#8696a0',
-    outline: 'none'
+    outline: 'none',
+    width:'400px'
   }
+
+  export const sendButtonStyle = {
+    backgroundColor: '#128C7E',
+    borderRadius: '50%',
+    border: 'none',
+    height: 40,
+    width: 40, 
+    
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'pointer' 
+  };
+
 
 export default  function TextBox(){
     const [question,setquestion] = useState('');
@@ -47,7 +61,7 @@ export default  function TextBox(){
             placeholder="Escribe un mensaje..."
             >
             </input>
-            <button> Enviar </button>
+            <button style={sendButtonStyle}> <BiPaperPlane/> </button>
             </form>
            
             <div>{answer.response}</div>
