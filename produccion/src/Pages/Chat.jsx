@@ -1,5 +1,7 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import axios from 'axios'
 import Typography from '@material-ui/core/Typography'
+import TextBox from '../Components/ChatTextBox.jsx'
 
 export default function Chat(){
     return(
@@ -11,11 +13,7 @@ export default function Chat(){
         </div>
 
 
-        <div>
-        <Typography variant="h3" gutterBottom>
-        Hola Chat
-       </Typography>
-        </div>
+        <TextBox></TextBox>
 
         
         </>
