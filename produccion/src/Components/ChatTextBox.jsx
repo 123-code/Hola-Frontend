@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import Typography from '@material-ui/core/Typography'
 import { BiPaperPlane } from "react-icons/bi";
+import { Circles } from 'react-loader-spinner'
 
 const inputStyle = {
     padding: '12px 16px',
@@ -15,8 +16,8 @@ const inputStyle = {
   }
 
   export const sendButtonStyle = {
-    backgroundColor: '#128C7E',
-    borderRadius: '50%',
+    backgroundColor: '#FF7F50',
+    borderRadius: '10%',
     border: 'none',
     height: 40,
     width: 40, 
@@ -30,30 +31,26 @@ const inputStyle = {
 export default  function TextBox(){
     const [question,setquestion] = useState('');
     const [answer,setanswer] = useState('');
+    const [loading, setLoading] = useState(false);
 
 
-    const SubmitQuestion = async (e) => {
-        e.preventDefault();
-        const response = await axios.post('https://123-code-laughing-space-robot-ppxqpr7g9pvc76wr-5000.preview.app.github.dev/chatbotresponse', {
-            question
-          });
+            const SubmitQuestion = async (e) => {
+                e.preventDefault();
+                setLoading(true);
+                const response = await axios.post('https://python-backend-production.up.railway.app/chatbotresponse', {
+                    question
+                  });
+                  setLoading(false);
+                  setanswer(response.data);
+
+            }
+
+
     
-          setanswer(response.data);
 
-    }
-
-
-
-
-
-
-    function handleChange(e) {
-        setquestion(e.target.value);
-      }
-
-    return(
-        <>
-        <div>
+            return(
+            <>
+            <div>
             <form onSubmit={SubmitQuestion}>
             <input value={question}
             onChange={(e) => setquestion(e.target.value)}
@@ -64,12 +61,21 @@ export default  function TextBox(){
             <button style={sendButtonStyle}> <BiPaperPlane/> </button>
             </form>
            
-            <div>{answer.response}</div>
-        </div>
+           
+            <div>{loading? <Circles
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="circles-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />:answer.response}</div>
+           </div>
 
 
         
-        </>
-    )
+          </>
+          )
 
-}
+          }
