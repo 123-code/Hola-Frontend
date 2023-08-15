@@ -14,7 +14,9 @@ const inputStyle = {
     fontSize: '16px',
     color: '#8696a0',
     outline: 'none',
-    width:'400px'
+    width:'400px',
+    alignItems: 'center',
+  
   }
 
   export const sendButtonStyle = {
@@ -54,23 +56,15 @@ export default  function TextBox(){
             }
             return(
             <>
-            <div>
+          <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
          
            
            
-            <div>{loading && <Circles
-            height="80"
-            width="80"
-            color="#4fa94d"
-            ariaLabel="circles-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-            visible={true}
-          />}</div>
+          
           <div>
-          <div> Tú </div>
-          <ChatBubble message={question}isUser={false} />
-          <div> HolAI</div>
+          {!question && <ChatBubble message={"Hola! soy Holachat, puedes preguntarme tus dudas relacionadas a la terapia de lenguaje."} isUser={true} />}
+          {question &&  <ChatBubble message={question}isUser={false} />}
+       
             {answer.response && <ChatBubble message={answer.response} isUser={true} />}
           </div>
            </div>
@@ -78,8 +72,18 @@ export default  function TextBox(){
           <div>
            
           </div>
-           
-           <form onSubmit={SubmitQuestion}>
+          <div style={{display: 'flex', alignItems: 'center'}}>{loading && <Circles
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="circles-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+            
+          />}</div>
+
+          <form style={{display: 'flex', alignItems: 'center'}} onSubmit={SubmitQuestion}>
             <input value={question}
             onChange={(e) => setquestion(e.target.value)}
             style={inputStyle}
