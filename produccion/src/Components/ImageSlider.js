@@ -7,13 +7,33 @@ import Bebe from '../Bebe.jpg';
 
 const ImageSlider = () => {
   const carouselStyle = {
+    
     backgroundColor: '#ffcc00',
     textAlign: 'center',
     padding: '20px',
+   
+  };
+
+
+  const header = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  color: 'white',
+  fontFamily: 'Arial, sans-serif',
+  fontSize: '90pt'
+  }
+
+  const ImageContainer ={
+    position: 'relative',
+    textAlign: 'center',
+    marginTop: '0px',
+  
   };
 
   const imageStyle = {
-    maxWidth: '800px',
+    maxWidth: '700px',
     height: 'auto',
     borderRadius: '10px',
   };
@@ -36,14 +56,16 @@ const ImageSlider = () => {
     <div style={carouselStyle}>
       <style>{mediaQueryStyle}</style>
       <Carousel showArrows={true} showThumbs={false} showStatus={false}>
-        <div>
-          <img style={imageStyle} src={Bebe} alt="Niño" />
-          <p style={captionStyle}>Trabajo con niños</p>
+        <div style={ImageContainer}>
+        <img className="object-scale-down h-47 w-47" src={Bebe} alt="flores" />
+          <div style={header}>Cambiamos Vidas</div>
+          
         </div>
 
-        <div>
-          <img style={imageStyle} src={Nina} alt="Niña" />
-          <p style={captionStyle}>Trabajo con infantes</p>
+        <div style={ImageContainer}>
+        <img className="object-scale-down h-47 w-47" src={Nina} alt="flores" />
+          <div style={header}>Cambiamos Vidas</div>
+          
         </div>
       </Carousel>
     </div>

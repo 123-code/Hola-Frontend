@@ -18,6 +18,13 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  const peacefulButtonStyle = {
+    color: '#256D4B', 
+    fontSize: '16px',
+    fontWeight: 'bold',
+    
+  }
+
   return (
     <div id="navFix">
       <div
@@ -41,34 +48,31 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="navItem">
-            <div className="navIcon" onClick={handleToggleMenu}>
-              <i
-                className={isOpen ? "fas fa-times" : "fas fa-bars"}
-                style={{
-                  color: colorMode === "light" ? "black" : "white",
-                }}
-              >
-                {isOpen ? <RiCloseLine /> : <GiHamburgerMenu />}
-              </i>
-            </div>
+          <div className="navIcon" onClick={handleToggleMenu}>
+            {isOpen ? (
+              <RiCloseLine />  
+            ) : (
+              <GiHamburgerMenu />
+            )}
+          </div>
             <ul className={isOpen ? "navMenu active" : "navMenu"} style={{ listStyleType: 'none' }}>
               <li className="navItem">
-                <Button onClick={() => navigate("/")} type="text">Inicio</Button>
+                <Button style={peacefulButtonStyle} onClick={() => navigate("/")} type="text">Inicio</Button>
               </li>
               <li className="navItem">
-                <Button onClick={() => navigate("/nosotros")} type="text">Nosotros</Button>
+                <Button style={peacefulButtonStyle} onClick={() => navigate("/nosotros")} type="text">Nosotros</Button>
               </li>
               <li className="navItem">
-                <Button onClick={() => navigate("/contactform")} type="text">Contáctanos</Button>
+                <Button style={peacefulButtonStyle} onClick={() => navigate("/contactform")} type="text">Contáctanos</Button>
               </li>
               <li className="navItem">
-                <Button onClick={() => navigate("/material")} type="text">Material</Button>
+                <Button style={peacefulButtonStyle} onClick={() => navigate("/material")} type="text">Material</Button>
               </li>
               <li className="navItem">
-                <Button onClick={() => navigate("/consultas")} type="text">Consultas</Button>
+                <Button style={peacefulButtonStyle} onClick={() => navigate("/consultas")} type="text">Consultas</Button>
               </li>
               <li className="navItem">
-                <Button onClick={() => navigate("/cursoverano")} type="text">Curso de Verano</Button>
+                <Button style={peacefulButtonStyle} onClick={() => navigate("/cursoverano")} type="text">Curso de Verano</Button>
               </li>
             </ul>
           </div>

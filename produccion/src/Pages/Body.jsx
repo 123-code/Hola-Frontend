@@ -30,15 +30,16 @@ const NestedList = () => {
   
 
   const listItemButtonStyle = {
-    display: 'flex',
+    display: 'flex', 
     alignItems: 'center',
-    padding: '10px',
-    borderRadius: '5px',
-    cursor: 'pointer',
+    justifyContent: 'center', 
+    padding: '10px 20px',
+    borderRadius: '30px',
+    cursor: 'pointer', 
     marginBottom: '5px',
     backgroundColor: '#f5f5f5',
     color: '#333',
-    transition: 'background-color 0.3s ease',
+    transition: 'background-color 0.3s ease' 
   };
 
   const listItemIconStyle = {
