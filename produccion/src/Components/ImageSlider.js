@@ -16,13 +16,14 @@ const ImageSlider = () => {
 
 
   const header = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  color: 'white',
-  fontFamily: 'Arial, sans-serif',
-  fontSize: '90pt'
+    position: 'absolute', 
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    color: 'white',
+    fontFamily: 'Arial, sans-serif',
+    fontSize: '40pt',
+  
   }
 
   const ImageContainer ={

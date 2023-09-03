@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ChatBotButton = () => {
+  const navigate = useNavigate();
   return (
-    <button 
+    <button onClick={() => navigate("/chat")}
       className="chatbot-btn"
       style={{
         position: 'fixed',

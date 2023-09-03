@@ -2,10 +2,11 @@ import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import Typography from '@material-ui/core/Typography'
 import TextBox from '../Components/ChatTextBox.jsx'
+import './chat.css';
 
 export default function Chat(){
     return(
-        <>
+        <div className="chat">
          <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         <Typography variant="h2" gutterBottom>
         Hola Chat
@@ -26,7 +27,7 @@ export default function Chat(){
         <div>
 
         </div>
-        </>
+        </div>
     )
 
 }
